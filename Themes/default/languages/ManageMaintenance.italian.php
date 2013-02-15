@@ -1,7 +1,6 @@
 <?php
-// Version: 2.0; ManageMaintenance
+// Version: ; ManageMaintenance
 
-// Important! Before editing these language files please read the text at the top of index.english.php.
 $txt['repair_zero_ids'] = 'Trovati topic e/o post con ID uguale a 0.';
 $txt['repair_missing_topics'] = 'Il post #%1$d è contenuto nel topic non più esistente #%2$d.';
 $txt['repair_missing_messages'] = 'Il topic #%1$d non contiene alcun post per ora.';
@@ -102,6 +101,8 @@ $txt['clear_filter'] = 'Rimuovi filtro';
 $txt['remove_selection'] = 'Rimuovi selezionati';
 $txt['remove_filtered_results'] = 'Rimuovi tutti i risultati filtrati';
 $txt['sure_about_errorlog_remove'] = 'Vuoi veramente rimuovere tutti i messaggi di errore?';
+$txt['remove_selection_confirm'] = 'Are you sure you want to delete the selected entries?';
+$txt['remove_filtered_results_confirm'] = 'Are you sure you want to delete the filtered entries?';
 $txt['reverse_direction'] = 'Inverti l\'ordine cronologico della lista';
 $txt['error_type'] = 'Tipo di errore';
 $txt['filter_only_type'] = 'Mostra solo gli errori di questo tipo';
@@ -156,6 +157,9 @@ $txt['maintain_old_choose'] = 'Sezioni specifiche (clicca per selezionarle tutte
 $txt['maintain_old_remove'] = 'Rimuovi adesso';
 $txt['maintain_old_confirm'] = 'Vuoi veramente eliminare i vecchi post?\\n\\nAttenzione, questa azione è irreversibile!';
 
+$txt['maintain_old_drafts'] = 'Remove old drafts';
+$txt['maintain_old_drafts_days'] = 'Remove all drafts older than';
+$txt['maintain_old_drafts_confirm'] = 'Are you really sure you want to delete old drafts now?\\n\\nThis cannot be undone!';
 $txt['maintain_members'] = 'Rimuovi gli utenti inattivi';
 $txt['maintain_members_ungrouped'] = 'Utenti non inseriti in un gruppo <span class="smalltext">(Utenti senza alcun gruppo assegnato)</span>';
 $txt['maintain_members_since1'] = 'Rimuovi tutti gli utenti che non hanno';
@@ -180,6 +184,15 @@ $txt['utf8_target_charset'] = 'Converti i dati e il database al formato';
 $txt['utf8_utf8'] = 'UTF-8';
 $txt['utf8_db_version_too_low'] = 'La versione di MySQL utilizzata dal server non è sufficientemente aggiornata per supportare il set UTF-8. La versione minima richiesta è la 4.1.2.';
 $txt['utf8_cannot_convert_fulltext'] = 'La tabella dei messaggi utilizza un diverso indice. Non puoi procedere con la conversione in UTF-8 fino a che l\'indice non sarà rimosso. Puoi ricrearlo dopo che la conversione sarà completata.';
+
+$txt['text_title'] = 'Convert to TEXT';
+$txt['mediumtext_title'] = 'Convert to MEDIUMTEXT';
+$txt['mediumtext_introduction'] = 'The default messages table can contain posts up to a size of 65535 characters, in order be able to store bigger texts the column must be converted to "MEDIUMTEXT". It is also possible to revert the column back to TEXT (that operation would reduce the space occupied), but <strong>only if</strong> none of the posts in your database exceed the size of 65535 characters. This condition will be verified before the conversion.';
+$txt['body_checking_introduction'] = 'This function will convert the column of your database that contains the text of the messages into a "TEXT" format (currently is "MEDIUMTEXT". This operation will allow to slightly reduce the amount of space occupied by each message (1 byte per message). If any message stored into the database is longer than 65535 characters it will be truncated and part of the text will be lost.';
+$txt['exceeding_messages'] = 'The following messages are longer than 65535 characters and will be truncated by the process:';
+$txt['exceeding_messages_morethan'] = 'And other %1$d';
+$txt['convert_to_text'] = 'No messages are longer than 65535 characters. You can safely proceed with the conversion without losing any part of the text.';
+$txt['convert_to_suggest_text'] = 'The messages body column in your database is currently set as MEDIUMTEXT, but the maximum allowed length set for the messages is lower than 65535 characters. You may free some space converting the column to TEXT.';
 
 $txt['entity_convert_title'] = 'Converti le HTML-entities ai caratteri UTF-8';
 $txt['entity_convert_only_utf8'] = 'Il database necessita di essere convertito al formato UTF-8 prima che ogni carattere HTML possa essere convertito alla codifica UTF-8';
@@ -206,5 +219,15 @@ $txt['reattribute_confirm'] = 'Sei sicuro di voler attribuire tutti i post invia
 $txt['reattribute_confirm_username'] = 'Username';
 $txt['reattribute_confirm_email'] = 'un indirizzo e-mail';
 $txt['reattribute_cannot_find_member'] = 'Non è possibile trovare l\'utente al quale attribuire i post.';
+
+$txt['maintain_recountposts'] = 'Recount User Posts';
+$txt['maintain_recountposts_info'] = 'Run this maintenance task to update your users total post count.  It will recount all (countable) posts made by each user and then update their profile post count totals';
+
+$txt['safe_mode_enabled'] = '<a href="http://php.net/manual/en/features.safe-mode.php">safe_mode</a> is enabled on your server!<br />The backup done with this tool cannot be considered reliable!';
+$txt['use_external_tool'] = 'Please consider using an external tool to backup your database, any backup created with this utility cannot be considered 100% reliable.';
+$txt['zipped_file'] = 'If you want you can create a compressed (zipped) backup.';
+$txt['plain_text'] = 'The best method to backup your database is to create a plain text file, a compressed package may not be completely reliable.';
+$txt['enable_maintenance1'] = 'Due to the size of your forum, it is recommended to place your forum in "maintenance mode" before you start the backup.';
+$txt['enable_maintenance2'] = 'To proceed, due to the size of your forum, please place your forum in "maintenance mode".';
 
 ?>

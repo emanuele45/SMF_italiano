@@ -1,5 +1,5 @@
 <?php
-// Version: 2.0; Install
+// Version: ; Install
 
 // These should be the same as those in index.language.php.
 $txt['lang_character_set'] = 'ISO-8859-1';
@@ -45,6 +45,7 @@ $txt['default_reserved_names'] = 'Amministratore\\nWebmaster\\nVisitatore\\nroot
 $txt['default_smileyset_name'] = 'Set di Alienine';
 $txt['default_aaron_smileyset_name'] = 'Set emoticon di Aaron';
 $txt['default_akyhne_smileyset_name'] = 'Set emoticon di Akyhne';
+$txt['default_fugue_smileyset_name'] = 'Fugue\'s Set';
 $txt['default_theme_name'] = 'Tema predefinito - Curve';
 $txt['default_core_theme_name'] = 'Tema - Core';
 $txt['default_classic_theme_name'] = 'Tema - YaBB SE classico';

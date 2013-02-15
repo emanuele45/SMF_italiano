@@ -1,7 +1,6 @@
 <?php
-// Version: 2.0; ManageBoards
+// Version: ; ManageBoards
 
-// Important! Before editing these language files please read the text at the top of index.english.php.
 $txt['boards_and_cats'] = 'Gestione sezioni e categorie';
 $txt['order'] = 'Ordine';
 $txt['full_name'] = 'Nome completo';
@@ -89,6 +88,8 @@ $txt['recycle_board'] = 'Sezione per i topic eliminati';
 $txt['recycle_board_unselected_notice'] = 'Hai abilitato il riciclo dei topic senzare specificare la sezione-cestino. Questa opzione non verrà abilitata fino a quando non avrai specificato una sezione dedicata ai topic eliminati.';
 $txt['countChildPosts'] = 'Calcola i post delle sottosezioni nei totali della sezione principale';
 $txt['allow_ignore_boards'] = 'Permetti di ignorare alcune sezioni';
+$txt['deny_boards_access'] = 'Enable the option to deny board access based on membergroup';
+$txt['boardsaccess_option_desc'] = 'For each permission you can choose \'Allow\' (A), \'Ignore\' (X), or <span class="alert">\'Deny\' (D)</span>.<br /><br />If you deny access, any member - (including moderators) - in that group will be denied access.<br />For this reason, you should set deny carefully, only when <strong>necessary</strong>. Ignore, on the other hand, denies unless otherwise granted.';
 
 $txt['mboards_select_destination'] = 'Seleziona destinazione per la sezione \'<strong>%1$s</strong>\'';
 $txt['mboards_cancel_moving'] = 'Annulla spostamento';

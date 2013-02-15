@@ -1,5 +1,5 @@
 <?php
-// Version: 2.0; ManagePermissions
+// Version: ; ManagePermissions
 
 $txt['permissions_title'] = 'Gestione autorizzazioni';
 $txt['permissions_modify'] = 'Modifica';
@@ -86,12 +86,16 @@ $txt['permissionname_search_posts'] = 'Ricerca post e topic';
 $txt['permissionhelp_search_posts'] = 'L\'autorizzazione alla ricerca permette agli utenti di ricercare nei forum a cui ha accesso. Quando l\'autorizzazione di ricerca è attivata, un pulsante \'Ricerca\' viene aggiunto alla barra superiore dei pulsanti del forum.';
 $txt['permissionname_karma_edit'] = 'Modificare il karma degli altri utenti';
 $txt['permissionhelp_karma_edit'] = 'Il karma è una funzione che mostra la popolarità di un utente. Per usare questa funzione occorre attivarla in \'Modifica funzionalità e opzioni\'. Questa autorizzazione permette ad un gruppo di utenti di assegnare dei voti. Questa autorizzazione non ha alcun effetto sui visitatori non registrati.';
+$txt['permissionname_disable_censor'] = 'Disable word censor';
+$txt['permissionhelp_disable_censor'] = 'Allows members the option to disable the word censor.';
 
 $txt['permissiongroup_pm'] = 'Messaggi privati';
 $txt['permissionname_pm_read'] = 'Leggere messaggi privati';
 $txt['permissionhelp_pm_read'] = 'Consente agli utenti di accedere alla sezione dei messaggi privati e di leggere i propri messaggi. Senza questa autorizzazione un utente non può inviare alcun messaggio privato.';
 $txt['permissionname_pm_send'] = 'Inviare messaggi privati';
 $txt['permissionhelp_pm_send'] = 'Invia messaggi privati ad altri utenti registrati. Richiede l\'autorizzazione \'Leggere messaggi privati\'.';
+$txt['permissionname_send_email_to_members'] = 'Send emails';
+$txt['permissionhelp_send_email_to_members'] = 'Send emails to other registered members.';
 
 $txt['permissiongroup_calendar'] = 'Calendario';
 $txt['permissionname_calendar_view'] = 'Visualizzare il calendario';
@@ -233,6 +237,22 @@ $txt['permissionhelp_poll_remove'] = 'Questa autorizzazione consente di eliminar
 $txt['permissionname_poll_remove_own'] = 'I propri sondaggi';
 $txt['permissionname_poll_remove_any'] = 'Tutti i sondaggi';
 
+$txt['permissionname_post_draft'] = 'Save drafts of new posts';
+$txt['permissionname_simple_post_draft'] = 'Save drafts of new posts';
+$txt['permissionhelp_post_draft'] = 'This permission allows users to save drafts of thier posts so they can complete them later.';
+$txt['permissionhelp_simple_post_draft'] = 'This permission allows users to save drafts of thier posts so they can complete them later.';
+$txt['permissionname_post_autosave_draft'] = 'Automaticaly save drafts of new posts';
+$txt['permissionname_simple_post_autosave_draft'] = 'Automaticaly save drafts of new posts';
+$txt['permissionhelp_post_autosave_draft'] = 'This permission allows users to have their posts autosaved as drafts so they can avoid loosing their work in the event of a timeout, disconnection or other error.  The autosave schedule is defined in the admin panel';
+$txt['permissionhelp_simple_post_autosave_draft'] = 'This permission allows users to have their posts autosaved as drafts so they can avoid loosing their work in the event of a timeout, disconnection or other error.  The autosave schedule is defined in the admin panel';
+$txt['permissionname_pm_autosave_draft'] = 'Automaticaly save drafts of new PM\'s';
+$txt['permissionname_simple_pm_autosave_draft'] = 'Automaticaly save drafts of new PM\'s';
+$txt['permissionhelp_pm_autosave_draft'] = 'This permission allows users to have their posts autosaved as drafts so they can avoid loosing their work in the event of a timeout, disconnection or other error.  The autosave schedule is defined in the admin panel';
+$txt['permissionname_pm_draft'] = 'Save drafts of personal messages';
+$txt['permissionname_simple_pm_draft'] = 'Save drafts of personal messages';
+$txt['permissionhelp_pm_draft'] = 'This permission allows users to save drafts of thier personal messages so they can complete them later.';
+$txt['permissionhelp_simple_pm_draft'] = 'This permission allows users to save drafts of thier personal messages so they can complete them later.';
+
 $txt['permissiongroup_approval'] = 'Moderazione post';
 $txt['permissionname_approve_posts'] = 'Approvare gli elementi in attesa di moderazione';
 $txt['permissionhelp_approve_posts'] = 'Permette ad un utente di approvare tutti gli elementi non moderati di una sezione.';
@@ -257,6 +277,7 @@ $txt['permissionhelp_view_attachments'] = 'Gli allegati sono documenti che sono 
 $txt['permissionname_post_attachment'] = 'Inviare allegati';
 $txt['permissionhelp_post_attachment'] = 'Gli allegati sono documenti che sono allegati ai messaggi inviati. Ogni post può contenere diversi allegati.';
 
+$txt['permissiongroup_simple_disable_censor'] = 'Word Censor';
 $txt['permissiongroup_simple_view_basic_info'] = 'Usa le funzionalità base del forum';
 $txt['permissiongroup_simple_use_pm_system'] = 'Contatta gli utenti tramite il sistema di messaggeria privata.';
 $txt['permissiongroup_simple_post_calendar'] = 'Inserisci eventi nel calendario';

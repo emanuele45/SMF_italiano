@@ -1,7 +1,6 @@
 <?php
-// Version: 2.0; Search
+// Version: ; Search
 
-// Important! Before editing these language files please read the text at the top of index.english.php.
 $txt['set_parameters'] = 'Imposta i parametri della ricerca';
 $txt['choose_board'] = 'Sezioni comprese nella ricerca';
 $txt['all_words'] = 'Tutti i termini';
@@ -30,6 +29,7 @@ $txt['search_specific_topic'] = 'Cerca solo nei messaggi della discussione';
 $txt['mods_cat_search'] = 'Cerca';
 $txt['groups_search_posts'] = 'Gruppi abilitati alla funzione di ricerca';
 $txt['simpleSearch'] = 'Abilita ricerca semplice';
+$txt['search_dropdown'] = 'Enable the Quick Search dropdown';
 $txt['search_results_per_page'] = 'Numero di risultati della ricerca per pagina';
 $txt['search_weight_frequency'] = 'Peso specifico della ricerca per numero di messaggi corrispondenti in una discussione';
 $txt['search_weight_age'] = 'Peso specifico della ricerca per età dell\'ultimo messaggio corrispondente';
@@ -101,6 +101,8 @@ $txt['search_error_max_percentage'] = 'Percentuale di parole da evitare non vali
 $txt['error_string_too_long'] = 'La stringa di ricerca deve inferiore ai %1$d caratteri.';
 
 $txt['search_adjust_query'] = 'Correggi i parametri di ricerca';
+$txt['search_warning_ignored_word'] = 'The following term has been ignored in your search because too short';
+$txt['search_warning_ignored_words'] = 'The following terms have been ignored in your search because too short';
 $txt['search_adjust_submit'] = 'Rivedi la ricerca';
 $txt['search_did_you_mean'] = 'Forse volevi cercare';
 
@@ -108,6 +110,7 @@ $txt['search_example'] = '<em>es.:</em> Orwell "La Fattoria degli Animali" -film
 
 $txt['search_engines_description'] = 'Da questa area puoi decidere con quale dettaglio tracciare il modo in cui i motori di ricerca indicizzano il tuo forum, come controllare i registri relativi alla loro attività.';
 $txt['spider_mode'] = 'Livello di tracciamento per il motore di ricerca<div class="smalltext">Nota: un livello maggiore di tracciamento incrementa la richiesta di risorse al server.</div>';
+$txt['spider_mode_note'] = 'Note higher level tracking increases server resource requirement.';
 $txt['spider_mode_off'] = 'Disabilitato';
 $txt['spider_mode_standard'] = 'Standard - Registra il minimo indispensabile dell\'attività dei crawler.';
 $txt['spider_mode_high'] = 'Alta - Fornisce statistiche maggiormente accurate.';
@@ -115,6 +118,7 @@ $txt['spider_mode_vhigh'] = 'Molto Alta - Come per l\'impostazione &quot;Alta&qu
 $txt['spider_settings_desc'] = 'In questa pagina puoi cambiare le impostazioni per il tracciamento dei crawler. N.B: se desideri attivare la pulizia automatica dei registri, puoi farlo andando <a href="%1$s">qui</a>';
 
 $txt['spider_group'] = 'Applica i permessi restrittivi dal gruppo<div class="smalltext">Per permetterti di bloccare l\'indicizzazione di alcune pagine da parte dei crawler.</div>';
+$txt['spider_group_note'] = 'To enable you to stop spiders indexing some pages.';
 $txt['spider_group_none'] = 'Disabilitato';
 
 $txt['show_spider_online'] = 'Mostra i crawler nella lista di chi è online';
@@ -145,11 +149,16 @@ $txt['spider_viewing'] = 'Visualizzando';
 $txt['spider_logs_empty'] = 'Al momento non sono presenti elementi nel registro delle attività degli spider.';
 $txt['spider_logs_info'] = 'N.B: la registrazione di ogni azione del crawler avviene solo se il livello di tracciamento è impostato su &quot;alto&quot; o &quot;molto alto&quot;. I dettagli di ogni azione del crawler vengono registrati se il tracciamento è impostato su &quot;molto alto&quot;.';
 $txt['spider_disabled'] = 'Disabilitato';
+$txt['spider_log_empty_log'] = 'Clear Log';
+$txt['spider_log_empty_log_confirm'] = 'Are you sure you want to completely clear the log';
 
 $txt['spider_logs_delete'] = 'Cancella dati';
 $txt['spider_logs_delete_older'] = 'Cancella ogni dato più vecchio di';
 $txt['spider_logs_delete_day'] = 'giorni.';
 $txt['spider_logs_delete_submit'] = 'Cancella';
+
+$txt['spider_stats_delete_older'] = 'Delete all spider statistics from spiders not seen in %1$s days.';
+
 // Don't use entities in the below string.
 $txt['spider_logs_delete_confirm'] = 'Desideri realmente cancellare tutte le voci appartenenti al log?';
 

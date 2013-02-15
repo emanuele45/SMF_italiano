@@ -1,9 +1,8 @@
 <?php
-// Version: 2.0; Stats
+// Version: ; Stats
 
 global $context;
 
-// Important! Before editing these language files please read the text at the top of index.english.php.
 $txt['most_online'] = 'Maggior numero di utenti online';
 
 $txt['stats_center'] = 'Pannello delle statistiche';

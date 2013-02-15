@@ -1,5 +1,5 @@
 <?php
-// Version: 2.0; Errors
+// Version: ; Errors
 
 global $scripturl, $modSettings;
 
@@ -25,6 +25,7 @@ $txt['not_a_user'] = 'L\'utente di cui stai cercando di visualizzare il profilo,
 $txt['not_a_topic'] = 'Questo topic non esiste in questa sezione.';
 $txt['not_approved_topic'] = 'Questo topic non è stato ancora approvato.';
 $txt['email_in_use'] = 'L\'indirizzo e-mail (%1$s) è già utilizzato da un altro utente. Se ritieni sia un errore, vai alla pagina di login e utilizza il promemoria della password per questo indirizzo.';
+$txt['attachments_no_write'] = 'La cartella di caricamento degli allegati non ha i permessi di scrittura. Non è quindi possibile salvare allegati o avatar.';
 
 $txt['didnt_select_vote'] = 'Non hai scelto alcuna opzione di voto.';
 $txt['poll_error'] = 'Il sondaggio è inesistente, è stato chiuso o stai tentando di votare una seconda volta.';
@@ -34,14 +35,10 @@ $txt['not_enough_posts_karma'] = 'Non hai abbastanza post per poter modificare i
 $txt['cant_change_own_karma'] = 'Non puoi modificare il tuo karma.';
 $txt['karma_wait_time'] = 'Non puoi modificare il karma di questo utente senza prima aver atteso %1$s %2$s.';
 $txt['feature_disabled'] = 'Spiacente, questa funzione non è attiva.';
-$txt['cant_access_upload_path'] = 'Impossibile accedere al percorso di caricamento degli allegati!';
-$txt['file_too_big'] = 'Il file è troppo grande. La dimensione massima concessa per un allegato è di %1$d KB.';
-$txt['attach_timeout'] = 'L\'allegato non può essere salvato. La causa è da ricercare nel tempo di caricamento troppo lungo o nella dimensione del file, superiore a quella ammessa dal server.<br /><br />Consultare l\'amministratore del server per ulteriori informazioni.';
-$txt['filename_exists'] = 'È già presente un allegato con lo stesso nome di quello che stai provando a caricare. Rinomina il file e prova a caricarlo nuovamente.';
-$txt['bad_attachment'] = 'Il tuo allegato non ha superato i controlli di sicurezza e non può essere caricato. Consulta l\'amministratore del forum.';
-$txt['ran_out_of_space'] = 'La cartella dedicata ai file caricati è piena. Prova con un file di dimensioni inferiori e/o contatta un amministratore.';
+$txt['feature_no_exists'] = 'Sorry, this feature doesn\'t exist.';
 $txt['couldnt_connect'] = 'Impossibile collegarsi al server o trovare il file';
 $txt['no_board'] = 'La sezione specificata non esiste';
+$txt['no_message'] = 'The message is no longer available';
 $txt['cant_split'] = 'Non hai il permesso di dividere i topic';
 $txt['cant_merge'] = 'Non hai il permesso di unire i topic';
 $txt['no_topic_id'] = 'Hai specificato un ID di topic non valido.';
@@ -56,6 +53,7 @@ $txt['already_a_mod'] = 'Hai scelto il nome utente di un moderatore già esistent
 $txt['session_timeout'] = 'Durante l\'inserimento la sessione è scaduta. Torna indietro e riprova.';
 $txt['session_verify_fail'] = 'Sessione di verifica fallita. Prova a scollegarti, tornare indietro e tentare di nuovo.';
 $txt['verify_url_fail'] = 'Impossibile verificare l\'indirizzo referrer. Torna indietro e riprova.';
+$txt['token_verify_fail'] = 'Token verification failed.  Please go back and try again.';
 $txt['guest_vote_disabled'] = 'Gli ospiti non possono votare in questo sondaggio.';
 
 $txt['cannot_access_mod_center'] = 'Non sei autorizzato ad accedere al centro di moderazione.';
@@ -131,6 +129,7 @@ $txt['cannot_search_posts'] = 'Non hai permessi adeguati per cercare nei post di
 $txt['cannot_send_mail'] = 'Non hai permessi adeguati per inviare e-mail agli utenti.';
 $txt['cannot_issue_warning'] = 'Non hai permessi adeguati per inviare richiami agli utenti.';
 $txt['cannot_send_topic'] = 'Non hai permessi adeguati per inserire topic in questa sezione.';
+$txt['cannot_send_email_to_members'] = 'Sorry, but the administrator has disallowed sending emails on this board.';
 $txt['cannot_split_any'] = 'Non hai permessi adeguati per dividere alcun topic in questa sezione.';
 $txt['cannot_view_attachments'] = 'Non hai permessi adeguati per scaricare o visualizzare gli allegati in questa sezione.';
 $txt['cannot_view_mlist'] = 'Non hai permessi adeguati per visualizzare l\'elenco degli utenti.';
@@ -140,6 +139,7 @@ $txt['cannot_who_view'] = 'Non hai permessi adeguati per visualizzare l\'elenco 
 $txt['no_theme'] = 'Questo tema non esiste.';
 $txt['theme_dir_wrong'] = 'La cartella predefinita per i temi non è corretta, fare clic su questo testo per sistemarla.';
 $txt['registration_disabled'] = 'Spiacente, ma la registrazione è attualmente disattivata.';
+$txt['registration_agreement_missing'] = 'The registration agreement file, agreement.txt, is either missing or empty.  Registrations have been disable until this is fixed';
 $txt['registration_no_secret_question'] = 'Spiacente, ma non ci sono domande segrete impostate per questo utente.';
 $txt['poll_range_error'] = 'Spiacente, ma il sondaggio deve durare più di 0 giorni.';
 $txt['delFirstPost'] = 'Non si ha il permesso di eliminare il primo post di un topic<p>Se si desidera eliminare questo topic, fare clic sul link Rimuovi topic o chiedere assistenza ad un moderatore o ad un amministratore.</p>';
@@ -151,6 +151,7 @@ $txt['parent_not_found'] = 'Struttura della sezione corrotta: impossibile trovar
 $txt['modify_post_time_passed'] = 'Non si può modificare questo topic poiché il limite di tempo per le modifiche è scaduto.';
 
 $txt['calendar_off'] = 'Non è possibile accedere al calendario in quanto al momento non attivo.';
+$txt['calendar_export_off'] = 'You cannot export calendar events because that feature is currently disabled.';
 $txt['invalid_month'] = 'Valore del mese non valido.';
 $txt['invalid_year'] = 'Valore dell\'anno non valido.';
 $txt['invalid_day'] = 'Giorno non valido.';
@@ -171,6 +172,7 @@ $txt['no_span'] = 'La funzionalità intervallo è al momento disattivata.';
 $txt['invalid_days_numb'] = 'Numero di giorni non valido per un intervallo.';
 
 $txt['moveto_noboards'] = 'Non esistono sezioni dove spostare questo topic!';
+$txt['topic_already_moved'] = 'This topic %1$s has been moved to the board %2$s, please check its new location before moving it again.';
 
 $txt['already_activated'] = 'L\'account è già stato attivato.';
 $txt['still_awaiting_approval'] = 'L\'account è ancora in attesa di approvazione da parte di un amministratore.';
@@ -182,6 +184,7 @@ $txt['invalid_ip'] = 'Indirizzo IP o insieme di indirizzi IP non validi.<br />Es
 $txt['invalid_tracking_ip'] = 'IP non valido / Gamma di IP.<br />Esempio di indirizzo IP valido: 127.0.0.1<br />
 Esempio di gamma di indirizzi IP valida: 127.0.0.*';
 $txt['invalid_username'] = 'Nome utente non trovato';
+$txt['no_user_selected'] = 'Member not found';
 $txt['no_ban_admin'] = 'Non è possibile bloccare un amministratore. Bisogna prima degradarlo!';
 $txt['no_bantype_selected'] = 'Non è stato selezionato alcun tipo di blocco';
 $txt['ban_not_found'] = 'Blocco non trovato';
@@ -191,6 +194,7 @@ $txt['ban_name_exists'] = 'Il nome di questo ban (%1$s) è già esistente. Per fav
 $txt['ban_trigger_already_exists'] = 'Il filtro di questo ban (%1$s) è già esistente in %2$s.';
 
 $txt['recycle_no_valid_board'] = 'Non è stata selezionata una sezione valida per i topic cestinati';
+$txt['post_already_deleted'] = 'The topic or message has already been moved to the recycle board. Are you sure you want to delete it completely?<br />If so follow <a href="%1$s">this link</a>';
 
 $txt['login_threshold_fail'] = 'Spiacente, sono stati esauriti i tentativi di accesso a disposizione. Riprovare in un secondo momento.';
 $txt['login_threshold_brute_fail'] = 'Spiacente, hai superato il numero massimo di tentativi per il login. Attendi per 30 secondi e riprova.';
@@ -200,26 +204,26 @@ $txt['who_off'] = 'Non è possibile accedere all\'elenco degli utenti online poic
 $txt['merge_create_topic_failed'] = 'Errore nella creazione di un nuovo topic.';
 $txt['merge_need_more_topics'] = 'Per unire dei topic è necessario indicarne almeno due.';
 
-$txt['postWaitTime_broken'] = 'L\'ultimo post dal tuo indirizzo IP risale a meno di %1$d secondi fa. Riprova più tardi.';
-$txt['registerWaitTime_broken'] = 'Hai già effettuato una registrazione appena %1$d secondi fa!';
-$txt['loginWaitTime_broken'] = 'Devi attendere almeno %1$d secondi per rieffettuare l\'accesso.';
-$txt['pmWaitTime_broken'] = 'L\'ultimo messaggio privato inviato da questo indirizzo IP risale a meno di %1$d secondi fa. Riprova più tardi.';
-$txt['reporttmWaitTime_broken'] = 'L\'ultimo topic segnalato da questo indirizzo IP risale a meno di %1$d secondi fa. Riprova più tardi.';
-$txt['sendtopcWaitTime_broken'] = 'L\'ultimo topic creato da questo indirizzo IP risale a meno di %1$d secondi fa. Riprova più tardi.';
-$txt['sendmailWaitTime_broken'] = 'L\'ultima e-mail inviata da questo indirizzo IP risale a meno di %1$d secondi fa. Riprova più tardi.';
-$txt['searchWaitTime_broken'] = 'La tua ultima ricerca è stata effettuata meno di %1$d secondi fa. Riprova più tardi.';
+$txt['post_WaitTime_broken'] = 'The last posting from your IP was less than %1$d seconds ago. Please try again later.';
+$txt['register_WaitTime_broken'] = 'You already registered just %1$d seconds ago!';
+$txt['login_WaitTime_broken'] = 'You will have to wait about %1$d seconds to login again, sorry.';
+$txt['pm_WaitTime_broken'] = 'The last personal message from your IP was less than %1$d seconds ago. Please try again later.';
+$txt['reporttm_WaitTime_broken'] = 'The last topic report from your IP was less than %1$d seconds ago. Please try again later.';
+$txt['sendtopic_WaitTime_broken'] = 'The last topic sent from your IP was less than %1$d seconds ago. Please try again later.';
+$txt['sendmail_WaitTime_broken'] = 'The last email sent from your IP was less than %1$d seconds ago. Please try again later.';
+$txt['search_WaitTime_broken'] = 'Your last search was less than %1$d seconds ago. Please try again later.';
+$txt['remind_WaitTime_broken'] = 'Your last reminder was less than %1$d seconds ago. Please try again later.';
 
 $txt['email_missing_data'] = 'Devi inserire qualcosa e nel campo Oggetto, e nelle caselle del massaggio.';
 
 $txt['topic_gone'] = 'Il topic o la sezione che stai cercando non esiste più o non possiedi adeguati permessi per visualizzarla.';
 $txt['theme_edit_missing'] = 'Non è possibile trovare il file che si sta cercando di modificare!';
 
-$txt['attachments_no_write'] = 'La cartella di caricamento degli allegati non ha i permessi di scrittura. Non è quindi possibile salvare allegati o avatar.';
-$txt['attachments_limit_per_post'] = 'Non è possibile caricare più di %1$d allegati per post';
-
 $txt['no_dump_database'] = 'Solo gli amministratori possono eseguire il backup del database!';
 $txt['pm_not_yours'] = 'Il messaggio privato che si vorrebbe citare non esiste o non è tra i propri. Tornare alla pagina precedente e riprovare.';
 $txt['mangled_post'] = 'I dati inviati dal modulo sono incompleti. Tornare alla pagina precedente e riprovare.';
+$txt['too_many_groups'] = 'Sorry, you selected too many groups, please remove some.';
+$txt['post_upload_error'] = 'The post data is missing. This error is can be caused by trying to submit a file larger than allowed by the server.  Please contact your administrator if this problem continues.';
 $txt['quoted_post_deleted'] = 'Il post che si sta cercando di citare non esiste, è stato cancellato o non è più visualizzabile.';
 $txt['pm_too_many_per_hour'] = 'Hai superato il limite massimo di %1$d messaggi personali inviati in un\'ora.';
 $txt['labels_too_many'] = 'Spiacente, %1$s messaggi hanno già superato il limite massimo di etichette disponibili!';
@@ -238,18 +242,22 @@ $txt['error_no_question'] = 'Non è stata inserita nessuna domanda in questo sond
 $txt['error_no_message'] = 'Non è stato inserito il corpo del post.';
 $txt['error_long_message'] = 'Il post supera la lunghezza massima consentita di %s caratteri.';
 $txt['error_no_comment'] = 'Il campo dei commenti è stato lasciato vuoto.';
+// duplicate of post_too_long in Post.{language}.php
+$txt['error_post_too_long'] = 'Your message is too long. Please go back and shorten it, then try again.';
 $txt['error_session_timeout'] = 'La sessione è scaduta durante l\'inserimento. Provare a reinserire il post.';
 $txt['error_no_to'] = 'Non è stato indicato nessun destinatario.';
 $txt['error_bad_to'] = 'Uno o più destinatari del campo \'A:\' non esistono.';
 $txt['error_bad_bcc'] = 'Uno o più destinatari del campo \'CCN:\' non esistono.';
 $txt['error_form_already_submitted'] = 'Questo post è già stato inviato! Forse hai accidentalmente fatto doppio clic sul pulsante di invio post o è stata aggiornata la pagina.';
 $txt['error_poll_few'] = 'Devono esserci almeno due scelte!';
+$txt['error_poll_many'] = 'You must have no more than 256 choices.';
 $txt['error_need_qr_verification'] = 'Completa la verifica sottostante per inviare il tuo post.';
 $txt['error_wrong_verification_code'] = 'Le lettere che hai digitato non corrispondono alle lettere mostrate nell\'immagine.';
 $txt['error_wrong_verification_answer'] = 'Non hai risposto correttamente alle domande di verifica.';
 $txt['error_need_verification_code'] = 'Per favore, inserisci il codice di verifica sottostante per visualizzare i risultati.';
 $txt['error_bad_file'] = 'Spiacente, il file specificato non può essere aperto: %1$s';
 $txt['error_bad_line'] = 'La riga specificata non è valida.';
+$txt['error_draft_not_saved'] = 'There was an error saving the draft';
 
 $txt['smiley_not_found'] = 'Emoticon non trovata.';
 $txt['smiley_has_no_code'] = 'Non è stato fornito un codice per questa emoticon.';
@@ -257,6 +265,7 @@ $txt['smiley_has_no_filename'] = 'Non è stato fornito un nome file per questa em
 $txt['smiley_not_unique'] = 'Esiste già un\'emoticon con questo nome.';
 $txt['smiley_set_already_exists'] = 'Esiste già un pacchetto di emoticon con questo indirizzo';
 $txt['smiley_set_not_found'] = 'Pacchetto di emoticon non trovato';
+$txt['smiley_set_dir_not_found'] = 'The directory of the smiley set %1$s is either invalid or cannot be accessed';
 $txt['smiley_set_path_already_used'] = 'L\'indirizzo di questo pacchetto di emoticon è già usato da un altro pacchetto.';
 $txt['smiley_set_unable_to_import'] = 'Impossibile importare il pacchetto di emoticon. La cartella non è valida o non è accessibile.';
 
@@ -283,6 +292,7 @@ $txt['package_get_error_not_found'] = 'Il pacchetto che stai cercando di install
 $txt['package_get_error_missing_xml'] = 'Il pacchetto che stai cercando di installare è mancante del file package-info.xml, di solito presente nella root della directory del pacchetto.';
 $txt['package_get_error_is_zero'] = 'Il pacchetto sembra essere vuoto, nonostante sia stato scaricato dal server. Controlla per favore che la cartella Packages e la sotto-cartella &quot;temp&quot; siano entrambe scrivibili. Se continui a riscontrare questo problema, prova ad estrarre il pacchetto sul tuo PC, a caricare i file estratti in una sotto-cartella di Packages e a provare nuovamente. Per esempio, se il pacchetto è chiamato shout.tar.gz, dovrai:<br />1) Scaricarlo sul tuo PC ed estrarre i file <br />2) Utilizzare un client FTP per creare una nuova cartella in &quot;Packages&quot, che in questo caso potrai chiamerai "shout".<br />3) Caricare tutti i file estratti dal pacchetto in questa cartella.<br />4) Tornare al gestore pacchetti, dove il pacchetto verrà automaticamente trovato da SMF.';
 $txt['package_get_error_packageinfo_corrupt'] = 'SMF non ha potuto trovare alcuna informazione valida nel file package-info.xml incluso nel pacchetto. Potrebbe esserci un errore nella modifica, o il pacchetto potrebbe corrotto.';
+$txt['package_get_error_is_theme'] = 'You can\'t install a Theme from this section, please use the <a href="{MANAGETHEMEURL}">Themes and Layout</a> management page to upload it';
 
 $txt['no_membergroup_selected'] = 'Nessun gruppo selezionato';
 $txt['membergroup_does_not_exist'] = 'Il gruppo non esiste o non è valido.';
@@ -306,6 +316,7 @@ $txt['error_no_search_daemon'] = 'Impossibile accedere alla funzione di ricerca'
 $txt['profile_errors_occurred'] = 'Si sono verificati i seguenti errori durante il salvataggio del profilo';
 $txt['profile_error_bad_offset'] = 'La differenza di tempo è fuori intervallo';
 $txt['profile_error_no_name'] = 'Il campo nome è stato lasciato vuoto';
+$txt['profile_error_digits_only'] = 'The \'number of posts\' box can only contain digits.';
 $txt['profile_error_name_taken'] = 'Il nome utente/nome visualizzato selezionato è già in uso';
 $txt['profile_error_name_too_long'] = 'Il nome selezionato è troppo lungo. Non dovrebbe essere più lungo di 60 caratteri';
 $txt['profile_error_no_email'] = 'Il campo e-mail è stato lasciato vuoto';
@@ -320,6 +331,10 @@ $txt['profile_error_password_restricted_words'] = 'La password non deve contener
 $txt['profile_error_password_chars'] = 'La password deve contenere una mescolanza di lettere maiuscole e minuscole e di numeri.';
 $txt['profile_error_already_requested_group'] = 'Hai già una richiesta in corso per questo gruppo!';
 $txt['profile_error_openid_in_use'] = 'Un altro utente sta già utilizzando quell\'indirizzo di autenticazione OpenID';
+$txt['profile_error_signature_not_yet_saved'] = 'The signature has not been saved.';
+$txt['profile_error_aim_too_long'] = 'The AIM nickname is too long.';
+$txt['profile_error_personal_text_too_long'] = 'The personal text is too long.';
+$txt['profile_error_user_title_too_long'] = 'The custom title is too long.';
 
 $txt['mysql_error_space'] = ' - verifica lo spazio disponibile per il database o contatta l\'amministratore del server.';
 
@@ -341,6 +356,7 @@ $txt['loadavg_allunread_disabled'] = 'Le risorse del server sono sovraccariche, 
 $txt['loadavg_unreadreplies_disabled'] = 'Il server è al momento sovraccarico. Riprovare più tardi.';
 $txt['loadavg_show_posts_disabled'] = 'Riprovare più tardi. I post di questo utente non sono al momento disponibili a causa del carico eccessivo sul server.';
 $txt['loadavg_unread_disabled'] = 'Le risorse del server sono temporaneamente troppo sotto pressione per poter elencare i topic non letti.';
+$txt['loadavg_userstats_disabled'] = 'Please try again later.  This member\'s statistics are not currently available due to high load on the server.';
 
 $txt['cannot_edit_permissions_inherited'] = 'Non puoi modificare direttamente i permessi ereditati, devi prima You can not edit inherited permissions directly, you must either edit the parent group or edit the membergroup inheritance.';
 
@@ -368,6 +384,7 @@ $txt['resend_email_success'] = 'Una nuova e-mail di attivazione è stata inviata 
 
 $txt['custom_option_need_name'] = 'Questa opzione del profilo deve avere un nome!';
 $txt['custom_option_not_unique'] = 'Il nome campo non è unico!';
+$txt['custom_option_regex_error'] = 'The regex you entered is not valid';
 
 $txt['warning_no_reason'] = 'Devi inserire un motivo per la modifica dello stato richiami dell\'utente.';
 $txt['warning_notify_blank'] = 'Hai selezionato di notificare l\'utente ma non hai completato i campi oggetto/messaggio.';

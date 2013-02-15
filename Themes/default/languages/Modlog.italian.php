@@ -1,5 +1,5 @@
 <?php
-// Version: 2.0; Modlog
+// Version: ; Modlog
 
 global $scripturl;
 
@@ -11,7 +11,9 @@ $txt['modlog_ip'] = 'IP';
 $txt['modlog_search_result'] = 'Risultati della ricerca';
 $txt['modlog_total_entries'] = 'Voci totali';
 $txt['modlog_ac_approve_topic'] = 'È stato approvato il topic &quot;{topic}&quot; da parte di &quot;{member}&quot;';
+$txt['modlog_ac_unapprove_topic'] = 'Unapproved topic &quot;{topic}&quot; by &quot;{member}&quot;';
 $txt['modlog_ac_approve'] = 'È stato approvato il post &quot;{subject}&quot; in &quot;{topic}&quot; da &quot;{member}&quot;';
+$txt['modlog_ac_unapprove'] = 'Unapproved message &quot;{subject}&quot; in &quot;{topic}&quot; by &quot;{member}&quot;';
 $txt['modlog_ac_lock'] = 'Chiuso il topic &quot;{topic}&quot;';
 $txt['modlog_ac_warning'] = '{member} richiamato per &quot;{message}&quot;';
 $txt['modlog_ac_unlock'] = 'Riaperto il topic &quot;{topic}&quot;';
@@ -33,6 +35,8 @@ $txt['modlog_moderation_log_desc'] = 'Di seguito la lista di tutte le azioni eff
 $txt['modlog_no_entries_found'] = 'Al momento non è presente alcun elemento nel registro delle azioni dei moderatori.';
 $txt['modlog_remove'] = 'Cancella';
 $txt['modlog_removeall'] = 'Cancella tutto';
+$txt['modlog_remove_selected_confirm'] = 'Are you sure you want to delete the selected log entries?';
+$txt['modlog_remove_all_confirm'] = 'Are you sure you want to completely clear the log?';
 $txt['modlog_go'] = 'Vai';
 $txt['modlog_add'] = 'Vai';
 $txt['modlog_search'] = 'Ricerca rapida';
@@ -83,5 +87,8 @@ $txt['modlog_ac_restore_topic'] = 'È stato ripristinato il topic &quot;{topic}&q
 $txt['modlog_ac_restore_posts'] = 'Ripristinati dei post da &quot;{subject}&quot; nel topic &quot;{topic}&quot; nella sezione &quot;{board}&quot;';
 
 $txt['modlog_parameter_guest'] = '<em>Visitatore</em>';
+
+$txt['modlog_ac_approve_attach'] = 'Approved &quot;{filename}&quot; in &quot;{message}&quot;';
+$txt['modlog_ac_remove_attach'] = 'Removed unapproved &quot;{filename}&quot; in &quot;{message}&quot;';
 
 ?>

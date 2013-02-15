@@ -1,7 +1,6 @@
 <?php
-// Version: 2.0; Reports
+// Version: ; Reports
 
-// Important! Before editing these language files please read the text at the top of index.english.php.
 $txt['generate_reports_desc'] = 'Qui è possibile generare vari rapporti che possono tornare utili nell\'amministrazione del forum. Basta seguire la procedura per scegliere l\'opzione desiderata.';
 $txt['generate_reports_continue'] = 'Continua';
 $txt['generate_reports_type'] = 'Selezionare il tipo di rapporto';
@@ -75,7 +74,7 @@ $txt['board_perms_group_read_only'] = 'Questa sezione non consente l\'aggiunta d
 $txt['member_group_color'] = 'Colore';
 $txt['member_group_min_posts'] = 'Messaggi minimi';
 $txt['member_group_max_messages'] = 'Numero massimo di messaggi privati';
-$txt['member_group_stars'] = 'Stelle';
+$txt['member_group_icons'] = 'Icons';
 $txt['member_group_settings'] = 'Impostazioni';
 $txt['member_group_access'] = 'Accesso alla sezione';
 
@@ -91,6 +90,7 @@ $txt['board_override_theme'] = 'Forza tema per la sezione';
 $txt['board_profile'] = 'Permessi del profilo';
 $txt['board_moderators'] = 'Moderatori';
 $txt['board_groups'] = 'Gruppi con accesso';
+$txt['board_disallowed_groups'] = 'Groups with Access Denied';
 
 // Group Permissions.
 $txt['group_perms_name_access_mod_center'] = 'Accesso al pannello moderazione';

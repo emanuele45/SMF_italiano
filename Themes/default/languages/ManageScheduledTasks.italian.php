@@ -1,7 +1,6 @@
 <?php
-// Version: 2.0; ManageScheduledTasks
+// Version: ; ManageScheduledTasks
 
-// Important! Before editing these language files please read the text at the top of index.english.php.
 $txt['scheduled_tasks_title'] = 'Azioni programmate';
 $txt['scheduled_tasks_header'] = 'Tutte le azioni programmate';
 $txt['scheduled_tasks_name'] = 'Nome azione';
@@ -32,6 +31,10 @@ $txt['scheduled_task_weekly_maintenance'] = 'Manutenzione settimanale';
 $txt['scheduled_task_desc_weekly_maintenance'] = 'Esegui la manutenzione essenziale e settimanale del forum - da non disabilitare.';
 $txt['scheduled_task_paid_subscriptions'] = 'Controllo delle sottoscrizioni a pagamento';
 $txt['scheduled_task_desc_paid_subscriptions'] = 'Invia i promemoria per le sottoscrizioni a pagamento ancora non rinnovate e rimuovi quelle già scadute.';
+$txt['scheduled_task_remove_topic_redirect'] = 'Remove MOVED: redirection topics';
+$txt['scheduled_task_desc_remove_topic_redirect'] = 'Deletes "MOVED:" topic notifications as specified when the moved notice was created.';
+$txt['scheduled_task_remove_temp_attachments'] = 'Remove temporary attachment files';
+$txt['scheduled_task_desc_remove_temp_attachments'] = 'Deletes temporary files created while attaching a file to a post that for any reason weren\'t renamed or deleted before.';
 
 $txt['scheduled_task_reg_starting'] = 'Inizio alle %1$s';
 $txt['scheduled_task_reg_repeating'] = 'ripeti ogni %1$d %2$s';
@@ -54,5 +57,9 @@ $txt['scheduled_log_time_run'] = 'Tempo di esecuzione';
 $txt['scheduled_log_time_taken'] = 'Tempo impiegato';
 $txt['scheduled_log_time_taken_seconds'] = 'secondi';
 $txt['scheduled_log_empty_log'] = 'Svuota registro';
+$txt['scheduled_log_empty_log_confirm'] = 'Are you sure you want to completely clear the log?';
+
+$txt['scheduled_task_remove_old_drafts'] = 'Remove old drafts';
+$txt['scheduled_task_desc_remove_old_drafts'] = 'Deletes drafts older than the number of days defined in the draft settings in the admin panel.';
 
 ?>

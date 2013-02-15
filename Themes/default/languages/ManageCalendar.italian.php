@@ -1,7 +1,6 @@
 <?php
-// Version: 2.0; ManageCalendar
+// Version: ; ManageCalendar
 
-// Important! Before editing these language files please read the text at the top of index.english.php.
 $txt['calendar_desc'] = 'Da qui è possibile modificare tutti gli aspetti del calendario.';
 
 // Calendar Settings
@@ -17,6 +16,7 @@ $txt['setting_cal_days_for_index'] = 'Numero massimo giorni di anticipo nell\'in
 $txt['setting_cal_showholidays'] = 'Visualizza festività';
 $txt['setting_cal_showbdays'] = 'Visualizza compleanni';
 $txt['setting_cal_showevents'] = 'Visualizza eventi';
+$txt['setting_cal_export'] = 'Allow events to be exported in iCal format';
 $txt['setting_cal_show_never'] = 'Mai';
 $txt['setting_cal_show_cal'] = 'Solo nel calendario';
 $txt['setting_cal_show_index'] = 'Solo nell\'indice della sezione';

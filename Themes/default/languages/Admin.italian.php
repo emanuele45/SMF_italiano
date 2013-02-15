@@ -1,5 +1,5 @@
 <?php
-// Version: 2.0; Admin
+// Version: ; Admin
 
 global $settings, $scripturl;
 
@@ -38,6 +38,7 @@ $txt['admin_config'] = 'Configurazione';
 $txt['admin_version_check'] = 'Controllo dettagliato della versione';
 $txt['admin_smffile'] = 'File SMF';
 $txt['admin_smfpackage'] = 'Pacchetto SMF';
+$txt['admin_logoff'] = 'Admin End Session';
 $txt['admin_maintenance'] = 'Manutenzione';
 $txt['admin_image_text'] = 'Mostra i pulsanti come immagini invece che come testo';
 $txt['admin_credits'] = 'Ringraziamenti';
@@ -59,6 +60,8 @@ $txt['admin_check_display'] = 'Controlla il nome visualizzato.';
 $txt['admin_newsletter_send'] = 'Da questa pagina puoi inviare una e-mail a chiunque. Gli indirizzi e-mail dei gruppi selezionati sono mostrati di seguito, ma è possibile rimuovere o aggiungere liberamente gli indirizzi desiderati. Assicurati che ciascun indirizzo sia separato utilizzando la forma: \'indirizzo1; indirizzo2\'.';
 $txt['admin_fader_delay'] = 'Tempo di visualizzazione in millisecondi di ciascuna notizia nel riquadro notizie';
 $txt['admin_bbc'] = 'Visualizza i bottoni BBC nelle pagine di inserimento dei post e dei messaggi privati?';
+$txt['zero_for_no_limit'] = '(0 for no limit)';
+$txt['zero_to_disable'] = '(0 to disable)';
 
 $txt['admin_backup_fail'] = 'Impossibile effettuare la copia di sicurezza del file Settings.php - assicurati che il file Settings_bak.php esista ed abbia i permessi di scrittura.';
 $txt['modSettings_info'] = 'Modifica o imposta le opzioni per il funzionamento di questo forum.';
@@ -85,11 +88,14 @@ $txt['attachment_check_now'] = 'Esegui il controllo';
 $txt['attachment_pruning'] = 'Rimozione Allegati';
 $txt['attachment_pruning_message'] = 'Messaggio da aggiungere al post';
 $txt['attachment_pruning_warning'] = 'Sei sicuro di voler eliminare questi allegati?\\nL\'operazione non potrà essere annullata!';
+
 $txt['attachment_total'] = 'Allegati totali';
 $txt['attachmentdir_size'] = 'Dimensione totale della cartella degli allegati';
 $txt['attachmentdir_size_current'] = 'Dimensione totale della cartella attuale degli allegati';
+$txt['attachmentdir_files_current'] = 'Total files in current attachment directory';
 $txt['attachment_space'] = 'Spazio totale disponibile nella cartella degli allegati';
-$txt['attachment_space_current'] = 'Spazio totale disponibile nella attuale cartella allegati';
+$txt['attachment_files'] = 'Total files remaining';
+
 $txt['attachment_options'] = 'Opzioni per il file allegato';
 $txt['attachment_log'] = 'Registro allegati';
 $txt['attachment_remove_old'] = 'Elimina gli allegati più vecchi di ';
@@ -97,6 +103,7 @@ $txt['attachment_remove_size'] = 'Elimina gli allegati di dimensioni superiori a
 $txt['attachment_name'] = 'Nome dell\'allegato';
 $txt['attachment_file_size'] = 'Dimensione del file';
 $txt['attachmentdir_size_not_set'] = 'Attualmente non è definita alcuna dimensione massima per la cartella';
+$txt['attachmentdir_files_not_set'] = 'No directory file limit is currently set';
 $txt['attachment_delete_admin'] = '[allegato eliminato da un amministratore]';
 $txt['live'] = 'Direttamente da Simple Machines...';
 $txt['remove_all'] = 'Rimuovi tutti';
@@ -133,6 +140,9 @@ $txt['member_id'] = 'ID';
 $txt['unknown'] = 'sconosciuto';
 $txt['security_wrong'] = 'Tentativo di accesso come amministratore!' . "\n" . 'Referer: %1$s' . "\n" . 'User agent: %2$s' . "\n" . 'IP: %3$s';
 
+$txt['email_preview_warning'] = 'Le preview non è accurata al 100%. Per preservare al massimo le funzionalità della pagina, solo l'HTML di base è rappresentato';
+$txt['email_as_html'] = 'Invia in formato HTML (con questa opzione sarà possibile inserire codice HTML nei messaggi e-mail.)';
+$txt['email_parsed_html'] = 'Aggiungi &lt;
 $txt['email_as_html'] = 'Invia in formato HTML (con questa opzione sarà possibile inserire codice HTML nei messaggi e-mail.)';
 $txt['email_parsed_html'] = 'Aggiungi &lt;br /&gt; e &amp;nbsp; a questo messaggio.';
 $txt['email_variables'] = 'In questo messaggio sarà possibile utilizzare un insieme limitato di &quot;variabili&quot;. Fare clic <a href="' . $scripturl . '?action=helpadmin;help=emailmembers" onclick="return reqWin(this.href);" class="help">qui</a> per maggiori informazioni.';
@@ -281,6 +291,7 @@ $txt['additional'] = 'Aggiuntiva';
 $txt['messenger_address'] = 'Indirizzo messaggistica istantanea';
 $txt['wild_cards_allowed'] = 'Sono consentiti i caratteri jolly * e ?';
 $txt['search_for'] = 'Cerca';
+$txt['search_match'] = 'Match';
 $txt['member_part_of_these_membergroups'] = 'L\'utente è membro di questi gruppi';
 $txt['membergroups'] = 'Gruppi';
 $txt['confirm_delete_members'] = 'Cancellare gli utenti selezionati?';
@@ -294,6 +305,7 @@ $txt['support_versions_php'] = 'Versione PHP';
 $txt['support_versions_db'] = 'Versione %1$s';
 $txt['support_versions_server'] = 'Versione server';
 $txt['support_versions_gd'] = 'Versione GD';
+$txt['support_versions_imagick'] = 'Imagick version';
 $txt['support_versions'] = 'Informazioni sulla versione';
 $txt['support_resources'] = 'Risorse di Supporto';
 $txt['support_resources_p1'] = 'Il nostro <a href="%1$s">Manuale Online</a> rappresenta la principale documentazione di SMF. Usufruisci del Manuale per chiarire dubbi su <a href="%2$s">Funzioni</a>, <a href="%3$s">Impostazioni</a>, <a href="%4$s">Temi</a>, <a href="%5$s">Pacchetti</a>, ecc. Il Manuale Online contiene la spiegazione di ogni area di SMF e dovrebbe velocemente fugare la maggior parte dei dubbi più frequenti.';
@@ -305,7 +317,6 @@ $txt['support_latest_fetch'] = 'Recupero informazioni sul supporto...';
 $txt['edit_permissions_info'] = 'Opzioni riguardanti le restrizioni ed i permessi, globali o di specifiche sezioni.';
 $txt['membergroups_members'] = 'Utenti Normali';
 $txt['membergroups_guests'] = 'Visitatori';
-$txt['membergroups_guests_na'] = 'n/a';
 $txt['membergroups_add_group'] = 'Aggiungi gruppo';
 $txt['membergroups_permissions'] = 'Permessi';
 
@@ -345,44 +356,108 @@ $txt['attachmentCheckExtensions'] = 'Consenti allegati per estensione';
 $txt['attachmentExtensions'] = 'Estensioni consentite per gli allegati';
 $txt['attachmentRecodeLineEndings'] = 'Codifica i ritorni a capo negli allegati testuali';
 $txt['attachmentShowImages'] = 'Visualizza anteprima delle immagini allegate alla fine dei post';
-$txt['attachmentEncryptFilenames'] = 'Cifratura degli allegati immagazzinati';
 $txt['attachmentUploadDir'] = 'Cartella Allegati<div class="smalltext"><a href="' . $scripturl . '?action=admin;area=manageattachments;sa=attachpaths">Imposta cartelle multiple per gli allegati</a></div>';
-$txt['attachmentUploadDir_multiple'] = 'Cartella Allegati';
 $txt['attachmentUploadDir_multiple_configure'] = '<a href="' . $scripturl . '?action=admin;area=manageattachments;sa=attachpaths">[Imposta cartelle multiple per gli allegati]</a>';
 $txt['attachmentDirSizeLimit'] = 'Dimensione massima dello spazio occupato dalla cartella degli allegati';
 $txt['attachmentPostLimit'] = 'Dimensione massima degli allegati per post';
 $txt['attachmentSizeLimit'] = 'Dimensione massima per allegato';
 $txt['attachmentNumPerPostLimit'] = 'Numero massimo di allegati per post';
-$txt['attachment_gd_warning'] = 'Il modulo GD non è installato. Non è possibile ricodificare le immagini.';
+$txt['attachment_img_enc_warning'] = 'Neither the GD module nor ImageMagick are currently installed. Image re-encoding is not possible.';
+$txt['attachment_postsize_warning'] = 'The current php.ini setting \'post_max_size\' may not support this.';
+$txt['attachment_filesize_warning'] = 'The current php.ini setting \'upload_max_filesize\' may not support this.';
 $txt['attachment_image_reencode'] = 'Ricodifica allegati potenzialmente pericolosi.';
 $txt['attachment_image_reencode_note'] = '(richiede il modulo GD)';
 $txt['attachment_image_paranoid_warning'] = 'I check di sicurezza estensivi possono produrre un numero elevato di allegati rifiutati.';
 $txt['attachment_image_paranoid'] = 'Esegui check di sicurezza estensivi su immagini caricate negli allegati.';
 $txt['attachmentThumbnails'] = 'Ridimensiona immagini quando vengono mostrate alla fine del post';
 $txt['attachment_thumb_png'] = 'Salva le anteprime come PNG';
+$txt['attachment_thumb_memory'] = 'Adaptive thumbnail memory';
+$txt['attachment_thumb_memory_note2'] = 'If the system can not get the memory no thumbnail will be created.';
+$txt['attachment_thumb_memory_note1'] = 'Leave this unchecked to always attempt to create a thumbnail';
 $txt['attachmentThumbWidth'] = 'Larghezza massima delle anteprime';
 $txt['attachmentThumbHeight'] = 'Altezza massima delle anteprime';
+$txt['attachment_thumbnail_settings'] = 'Thumbnail Settings';
+$txt['attachment_security_settings'] = 'Attachment security settings';
 
 $txt['attach_dir_does_not_exist'] = 'Non esistente';
 $txt['attach_dir_not_writable'] = 'Non modificabile';
 $txt['attach_dir_files_missing'] = 'File Mancanti (<a href=" . $scripturl . ?action=admin;area=manageattachments;sa=repair;%2$s=%1$s">Correggi</a>)';
 $txt['attach_dir_unused'] = 'Inutilizzata';
+$txt['attach_dir_empty'] = 'Empty';
 $txt['attach_dir_ok'] = 'OK';
+$txt['attach_dir_basedir'] = 'Base directory';
 
-$txt['attach_path_manage'] = 'Gestisci percorsi allegati';
-$txt['attach_paths'] = 'Percorsi degli allegati';
+$txt['attach_dir_desc'] = 'Create new directories or change the current directory below. <br />To create a new directory within the forum directory structure, use just the directory name. <br />To remove a directory, blank the path input field. Only empty directories can be removed. To see if a directory is empty, check for files or sub-directories in brackets next to the file count. <br /> To rename a directory, simply change its name in the input field. Only directories without sub-directories may be renamed. Directories can be renamed as long as they do not contain a sub-directory. If the new directory is to be in the created within the forum directory structure.';
+$txt['attach_dir_base_desc'] = 'You may use below to change the current base directory or create a new one. New base directories are also added to the Attachment Directory list. You may also designate an existing directory to be a base directory.';
+$txt['attach_dir_save_problem'] = 'Oops, there seems to be a problem.';
+$txt['attachments_no_create'] = 'Unable to create a new attachment directory. Please do so using a FTP client or your site file manager.';
+$txt['attachments_no_write'] = 'This directory has been created but is not writable. Please attempt to do so using a FTP client or your site file manager.';
+$txt['attach_dir_duplicate_msg'] = 'Unable to add. This directory already exists.';
+$txt['attach_dir_exists_msg'] = 'Unable to move. A directory already exists at that path.';
+$txt['attach_dir_base_dupe_msg'] = 'Unable to add. This base directory has already been created.';
+$txt['attach_dir_base_no_create'] = 'Unable to create. Please verify the path input. Or create this directory using an FTP client or site file manager and re-try.';
+$txt['attach_dir_no_rename'] = 'Unable to move or rename. Please verify that the path is correct or that this directory does not contain any sub-directories.';
+$txt['attach_dir_no_delete'] = 'Is not empty and can not be deleted. Please do so using a FTP client or site file manager.';
+$txt['attach_dir_no_remove'] = 'Still contains files or is a base directory and can not be deleted.';
+$txt['attach_dir_is_current'] = 'Unable to remove while it is selected as the current directory.';
+$txt['attach_dir_is_current_bd'] = 'Unable to remove while it is selected as the current base directory.';
+$txt['attach_last_dir'] = 'Last active attachment directory';
 $txt['attach_current_dir'] = 'Cartella in uso';
+$txt['attach_current'] = 'Current';
+$txt['attach_path_manage'] = 'Gestisci percorsi allegati';
+$txt['attach_directories'] = 'Attachment Directories';
+$txt['attach_paths'] = 'Percorsi degli allegati';
 $txt['attach_path'] = 'Percorso';
 $txt['attach_current_size'] = 'Dimensione attuale (in KB)';
 $txt['attach_num_files'] = 'File';
 $txt['attach_dir_status'] = 'Stato';
 $txt['attach_add_path'] = 'Aggiungi Percorso';
 $txt['attach_path_current_bad'] = 'Directory attuale degli allegati non valida.';
+$txt['attachmentDirFileLimit'] = 'Maximum number of files per directory';
+
+$txt['attach_base_paths'] = 'Base directory paths';
+$txt['attach_num_dirs'] = 'Directories';
+$txt['max_image_width'] = 'Max display width of posted or attached images';
+$txt['max_image_height'] = 'Max display height of posted or attached images';
+
+$txt['automanage_attachments'] = 'Choose the method for the management of the attachment directories';
+$txt['attachments_normal'] = '(Manual) SMF default behaviour';
+$txt['attachments_auto_years'] = '(Auto) Subdivide by years';
+$txt['attachments_auto_months'] = '(Auto) Subdivide by years and months';
+$txt['attachments_auto_days'] = '(Auto) Subdivide by years, months and days';
+$txt['attachments_auto_16'] = '(Auto) 16 random directories';
+$txt['attachments_auto_16x16'] = '(Auto) 16 random directories with 16 random sub-directories';
+$txt['attachments_auto_space'] = '(Auto) When either directory space limit is reached';
+
+$txt['use_subdirectories_for_attachments'] = 'Create new directories within a base directory';
+$txt['use_subdirectories_for_attachments_note'] = 'Otherwise any new directories will be created within the forum\'s main directory.';
+$txt['basedirectory_for_attachments'] = 'Set a base directory for attachments';
+$txt['basedirectory_for_attachments_current'] = 'Current base directory';
+$txt['basedirectory_for_attachments_warning'] = '<div class="smalltext">Please note that the directory is wrong. <br />(<a href="' . $scripturl . '?action=admin;area=manageattachments;sa=attachpaths">Attempt to correct</a>)</div>';
+$txt['attach_current_dir_warning'] = '<div class="smalltext">There seems to be a problem with this directory. <br />(<a href="' . $scripturl . '?action=admin;area=manageattachments;sa=attachpaths">Attempt to correct</a>)</div>';
+
+$txt['attachment_transfer'] = 'Transfer Attachments';
+$txt['attachment_transfer_desc'] = 'Transfer files betwen directories.';
+$txt['attachment_transfer_select'] = 'Select directory';
+$txt['attachment_transfer_now'] = 'Transfer';
+$txt['attachment_transfer_from'] = 'Transfer files from';
+$txt['attachment_transfer_auto'] = 'Automatically by space or file count';
+$txt['attachment_transfer_auto_select'] = 'Select base directory';
+$txt['attachment_transfer_to'] = 'Or to a specific directory.';
+$txt['attachment_transfer_empty'] = 'Empty the source directory';
+$txt['attachment_transfer_no_base'] = 'No base directories available.';
+$txt['attachment_transfer_forum_root'] = 'Forum root directory.';
+$txt['attachment_transfer_no_room'] = 'Directory size or file count limit reached.';
+$txt['attachment_transfer_no_find'] = 'No files were found to transfer.';
+$txt['attachments_transfered'] = '%1$d files were transfered to %2$s';
+$txt['attachments_not_transfered'] = '%1$d files were not transfered.';
+$txt['attachment_transfer_no_dir'] = 'Either the source directory or one of the target options were not selected.';
+$txt['attachment_transfer_same_dir'] = 'You cannot select the same directory as both the source and target.';
+$txt['attachment_transfer_progress'] = 'Please wait. Transfer in progess.';
 
 $txt['mods_cat_avatars'] = 'Avatar';
 $txt['avatar_directory'] = 'Cartella degli avatar';
 $txt['avatar_url'] = 'URL degli avatar';
-$txt['avatar_dimension_note'] = '(0 = nessun limite)';
 $txt['avatar_max_width_external'] = 'Larghezza massima per gli avatar esterni<div class="smalltext">(0 per nessun limite)</div>';
 $txt['avatar_max_height_external'] = 'Altezza massima per gli avatar esterni<div class="smalltext">(0 per nessun limite)</div>';
 $txt['avatar_action_too_large'] = 'Se l\'avatar supera le dimensioni consentite...';
@@ -395,7 +470,7 @@ $txt['avatar_max_height_upload'] = 'Altezza massima per gli avatar caricati<div 
 $txt['avatar_resize_upload'] = 'Ridimensiona avatar troppo grandi';
 $txt['avatar_resize_upload_note'] = '(richiede il modulo GD)';
 $txt['avatar_download_png'] = 'Utilizza il formato PNG per gli avatar ridimensionati';
-$txt['avatar_gd_warning'] = 'Il modulo GD non risulta correntemente installato. Alcune funzioni per la gestione degli avatar saranno disattivate.';
+$txt['avatar_img_enc_warning'] = 'Neither the GD module nor ImageMagick are currently installed. Some avatar features are disabled.';
 $txt['avatar_external'] = 'Avatar esterni';
 $txt['avatar_upload'] = 'Avatar caricabili';
 $txt['avatar_server_stored'] = 'Avatar presenti nel server';
@@ -431,15 +506,18 @@ $txt['attach_repair_file_size_of_zero'] = '%1$d allegati/avatar hanno dimensione
 $txt['attach_repair_attachment_no_msg'] = '%1$d allegati non sono più associati ad alcun post';
 $txt['attach_repair_avatar_no_member'] = '%1$d avatar non hanno più un utente associato';
 $txt['attach_repair_wrong_folder'] = '%1$d allegati sono posizionati nella cartella errata';
+$txt['attach_repair_files_without_attachment'] = '%1$d files do not have a corresponding entry in the database. (These will be deleted)';
 
 $txt['news_title'] = 'News e newsletter';
 $txt['news_settings_desc'] = 'Da qui è possibile cambiare le impostazioni ed i permessi relativi alle notizie ed alle newsletter.';
 $txt['news_settings_submit'] = 'Salva';
 $txt['news_mailing_desc'] = 'Da questo menu è possibile inviare messaggi a tutti gli utenti che si sono registrati ed hanno inserito il proprio indirizzo e-mail. è possibile modificare la lista di distribuzione, o inviare messaggi a tutti. Utile per importanti informazioni di aggiornamento o notizie.';
+$txt['news_error_no_news'] = 'Nothing written';
 $txt['groups_edit_news'] = 'Gruppi che possono modificare le notizie';
 $txt['groups_send_mail'] = 'Gruppi che possono inviare newsletter al forum';
 $txt['xmlnews_enable'] = 'Abilita notizie XML/RSS';
 $txt['xmlnews_maxlen'] = 'Lunghezza massima post:<div class="smalltext">(0 per disabilitare - non consigliato.)</div>';
+$txt['xmlnews_maxlen_note'] = '(0 to disable, bad idea.)';
 $txt['editnews_clickadd'] = 'Fare clic qui per aggiungere un altro elemento.';
 $txt['editnews_remove_selected'] = 'Rimuovi selezionate';
 $txt['editnews_remove_confirm'] = 'Rimuovere le notizie selezionate?';
@@ -476,6 +554,11 @@ $txt['manageposts_topic_settings'] = 'Impostazioni topic';
 $txt['manageposts_topic_settings_description'] = 'Da qui è possibile modificare tutte le impostazioni relative ai topic.';
 $txt['manageposts_topic_settings_submit'] = 'Salva';
 
+$txt['managedrafts_settings'] = 'Draft Settings';
+$txt['managedrafts_settings_description'] = 'Here you can set all settings involving drafts.';
+$txt['managedrafts_submit'] = 'Save';
+$txt['manage_drafts'] = 'Drafts';
+
 $txt['removeNestedQuotes'] = 'Rimuovi citazioni annidate durante l\'invio';
 $txt['enableEmbeddedFlash'] = 'Abilita flash nei post';
 $txt['enableEmbeddedFlash_warning'] = 'potrebbe essere un rischio per la sicurezza!';
@@ -484,14 +567,15 @@ $txt['enableSpellChecking_warning'] = 'non funziona su tutti i server!';
 $txt['disable_wysiwyg'] = 'Disabilita editor WYSIWYG';
 $txt['max_messageLength'] = 'Dimensione massima consentita per un post';
 $txt['max_messageLength_zero'] = '0 per nessun limite.';
-$txt['fixLongWords'] = 'Spezza le parole con più lettere di';
-$txt['fixLongWords_zero'] = '0 per disabilitare.';
-$txt['fixLongWords_warning'] = 'non funziona su tutti i server!';
+$txt['convert_to_mediumtext'] = 'Your database is not setup to accept messages longer than 65535 characters. Please use the <a href="%1$s">database maintenance</a> page to convert the database and then came back to increase the maximum allowed post size.';
 $txt['topicSummaryPosts'] = 'Post da visualizzare nel sommario del topic';
 $txt['spamWaitTime'] = 'Intervallo richiesto tra un post e l\'altro da parte dello stesso IP';
 $txt['edit_wait_time'] = 'Tempo di attesa di cortesia prima di modifiche';
 $txt['edit_disable_time'] = 'Tempo massimo dopo l\'invio in cui sono permesse modifiche';
 $txt['edit_disable_time_zero'] = '0 per disabilitare';
+$txt['preview_characters'] = 'Maximum length of last/first post preview';
+$txt['preview_characters_units'] = 'characters';
+$txt['preview_characters_zero'] = '0 to disable';
 
 $txt['enableBBC'] = 'Abilita il codice bulletin board (BBC)';
 $txt['enablePostHTML'] = 'Abilita HTML <em>di base</em> nei post';
@@ -507,6 +591,7 @@ $txt['oldTopicDays'] = 'Tempo prima che un topic venga indicato come vecchio dur
 $txt['oldTopicDays_zero'] = '0 per disabilitare';
 $txt['defaultMaxTopics'] = 'Numero di topic per pagina nell\'indice dei post';
 $txt['defaultMaxMessages'] = 'Numero di post per pagina in una pagina di topic.';
+$txt['disable_print_topic'] = 'Disable print topic feature';
 $txt['hotTopicPosts'] = 'Numero di post per un topic caldo';
 $txt['hotTopicVeryPosts'] = 'Numero di post per un topic rovente';
 $txt['enableAllMessages'] = 'Dimensione massima topic per mostrare &quot;Tutti&quot; i post';
@@ -523,6 +608,10 @@ $txt['database_paths_settings'] = 'Database e percorsi';
 $txt['cookies_sessions_settings'] = 'Cookie e sessioni';
 $txt['caching_settings'] = 'Impostazioni Caching';
 $txt['load_balancing_settings'] = 'Ottimizzazione del Caricamento';
+$txt['phpinfo_settings'] = 'PHP Info';
+$txt['phpinfo_localsettings'] = 'Local Settings';
+$txt['phpinfo_defaultsettings'] = 'Default Settings';
+$txt['phpinfo_itemsettings'] = 'Settings';
 
 $txt['language_configuration'] = 'Traduzioni';
 $txt['language_description'] = 'Questa sezione ti permette di gestire le traduzioni installate sul tuo forum e scaricarle dal sito di Simple Machines. Da qui puoi anche modificare le impostazioni legate alle lingua in generale.';
@@ -565,6 +654,7 @@ $txt['admin_search_section_sections'] = 'Sezione';
 $txt['admin_search_section_settings'] = 'Impostazione';
 
 $txt['core_settings_title'] = 'Funzioni di base';
+$txt['core_settings_desc'] = 'This page allows you to turn on or off optional features of your forum.';
 $txt['mods_cat_features'] = 'Generale';
 $txt['mods_cat_security_general'] = 'Generale';
 $txt['antispam_title'] = 'Anti-Spam';
@@ -575,6 +665,10 @@ $txt['moderation_settings_short'] = 'Moderazione';
 $txt['signature_settings_short'] = 'Firme';
 $txt['custom_profile_shorttitle'] = 'Campi Profilo';
 $txt['pruning_title'] = 'Pulizia del registro azioni';
+
+$txt['core_settings_activation_message'] = 'The feature {core_feature} has been activated, click on the title to configure it';
+$txt['core_settings_deactivation_message'] = 'The feature {core_feature} has been deactivated';
+$txt['core_settings_generic_error'] = 'An unforeseen error occurred, please relod the page and try again';
 
 $txt['boardsEdit'] = 'Modificare sezione';
 $txt['mboards_new_cat'] = 'Crea nuova categoria';
@@ -614,5 +708,29 @@ $txt['spider_stats'] = 'Statistiche';
 
 $txt['paid_subscriptions'] = 'Sottoscrizioni a pagamento';
 $txt['paid_subs_view'] = 'Visualizza sottoscrizioni';
+
+$txt['hooks_title_list'] = 'Integration Hooks';
+$txt['hooks_field_hook_name'] = 'Hook Name';
+$txt['hooks_field_function_name'] = 'Function Name';
+$txt['hooks_field_function'] = 'Function';
+$txt['hooks_field_included_file'] = 'Included file';
+$txt['hooks_field_file_name'] = 'File Name';
+$txt['hooks_field_hook_exists'] = 'Status';
+$txt['hooks_active'] = 'Exists';
+$txt['hooks_disabled'] = 'Disabled';
+$txt['hooks_missing'] = 'Not found';
+$txt['hooks_no_hooks'] = 'There are currenty no hooks in the system.';
+$txt['hooks_button_remove'] = 'Remove';
+$txt['hooks_disable_instructions'] = 'Click on the status icon to enable or disable the hook';
+$txt['hooks_disable_legend'] = 'Legend';
+$txt['hooks_disable_legend_exists'] = 'the hook exists and is active';
+$txt['hooks_disable_legend_disabled'] = 'the hook exists but has been disabled';
+$txt['hooks_disable_legend_missing'] = 'the hook has not been found';
+$txt['hooks_reset_filter'] = 'Reset filter';
+
+$txt['board_perms_allow'] = 'Allow';
+$txt['board_perms_ignore'] = 'Ignore';
+$txt['board_perms_deny'] = 'Deny';
+$txt['all_boards_in_cat'] = 'All boards in this category';
 
 ?>

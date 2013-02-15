@@ -1,14 +1,15 @@
 <?php
-// Version: 2.0; Login
+// Version: ; Login
 
 global $context;
 
-// Important! Before editing these language files please read the text at the top of index.english.php.
 // Registration agreement page.
 $txt['registration_agreement'] = 'Termini della Registrazione';
 $txt['agreement_agree'] = 'Accetto i termini della registrazione.';
 $txt['agreement_agree_coppa_above'] = 'Accetto i termini della registrazione ed ho minimo %1$d anni.';
 $txt['agreement_agree_coppa_below'] = 'Accetto i termini della registrazione ed ho meno di %1$d anni.';
+$txt['agree_coppa_above'] = 'I am at least %1$d years old.';
+$txt['agree_coppa_below'] = 'I am younger than %1$d years old.';
 
 // Registration form.
 $txt['registration_form'] = 'Casella di Registrazione';
@@ -28,8 +29,8 @@ $txt['additional_information'] = 'Informazioni aggiuntive';
 $txt['warning'] = 'Attenzione!';
 $txt['only_members_can_access'] = 'Solo gli utenti registrati possono accedere a questa sezione.';
 $txt['login_below'] = 'Effettua l\'accesso in basso o';
-$txt['register_an_account'] = 'registra un account';
-$txt['login_with_forum'] = 'con %1$s.';
+$txt['login_below_or_register'] = 'Please login below or <a href="%1$s">register an account</a> with %2$s';
+
 // Use numeric entities in the below two strings.
 $txt['may_change_in_profile'] = 'È possibile modificarli da questa stessa pagina o dal profilo dopo aver effettuato l\'accesso:';
 $txt['your_username_is'] = 'Il tuo nome utente è: ';

@@ -1,10 +1,10 @@
 <?php
-// Version: 2.0; Packages
+// Version: 2.1 Beta 1; Packages
 
-// Important! Before editing these language files please read the text at the top of index.english.php.
 $txt['package_proceed'] = 'Procedi';
 $txt['php_script'] = 'File di modifica estratto. Questa modifica viene fornita con uno script PHP che dovrà essere eseguito prima di poter funzionare';
 $txt['package_run'] = 'Avvia';
+$txt['package_id'] = 'ID';
 $txt['package_read'] = 'Leggi';
 $txt['script_output'] = 'Output dello script:';
 $txt['additional_notes'] = 'Note aggiuntive';
@@ -30,6 +30,7 @@ $txt['no_mods_installed'] = 'Nessuna MOD installata al momento';
 $txt['browse_installed'] = 'Sfoglia le MOD installate';
 $txt['uninstall'] = 'Disinstalla';
 $txt['delete_list'] = 'Elimina elenco MOD';
+$txt['package_delete_list_warning'] = 'Are you sure you wish to clear the installed modification list?';
 $txt['php_safe_mode'] = 'Il proprio server ha il PHP impostato in SAFE MODE. Tale funzionalità non è compatibile con il SAFE MODE. Spiacente.';
 $txt['lets_try_anyway'] = 'Ad ogni modo, riprova.';
 
@@ -80,6 +81,7 @@ $txt['packages_latest_fetch'] = 'Ricerca in corso dei pacchetti più popolari e r
 $txt['package_upgrade'] = 'Aggiorna';
 $txt['package_uninstall_readme'] = 'Leggimi della Disinstallazione';
 $txt['package_install_readme'] = 'Istruzioni per l\'installazione';
+$txt['package_install_license'] = 'License';
 $txt['package_install_type'] = 'Tipo';
 $txt['package_install_action'] = 'Azione';
 $txt['package_install_desc'] = 'Descrizione';
@@ -95,15 +97,26 @@ $txt['package_tree'] = 'Albero';
 $txt['execute_modification'] = 'Esegui modifiche';
 $txt['execute_code'] = 'Esegui codice';
 $txt['execute_database_changes'] = 'Adatta il database';
+$txt['execute_hook_add'] = 'Add Hook';
+$txt['execute_hook_remove'] = 'Remove Hook';
+$txt['execute_hook_action'] = 'Adapting hook %1$s';
+$txt['package_requires'] = 'Requires Modification';
+$txt['package_check_for'] = 'Check for installation:';
+$txt['execute_credits_add'] = 'Add Credits';
+$txt['execute_credits_remove'] = 'Remove Credits';
+$txt['execute_credits_action'] = 'Credits: %1$s';
 
 $txt['package_install_actions'] = 'Azioni per l\'installazione di';
 $txt['package_will_fail_title'] = 'Errore durante l\'installazione della MOD';
 $txt['package_will_fail_warning'] = 'Si è verificato almeno un errore durante una prova di installazione di questo pacchetto MOD.
 	Si consiglia <strong>caldamente</strong> di non continuare con l\'installazione in caso di dubbi su quello che si sta facendo e di avere una copia di sicurezza molto recente.
 	Tale errore potrebbe essere causato da un conflitto tra la MOD che si sta installando e un\'altra già installata, da un problema nel pacchetto MOD, da un pacchetto che necessita di un altro pacchetto non ancora installato, oppure da un pacchetto preparato per un\'altra versione di SMF.';
+$txt['package_will_fail_unknown_action'] = 'The package is trying to perform an unknown action: %1$s';
 // Don't use entities in the below string.
 $txt['package_will_fail_popup'] = 'Vuoi continuare ad installare questa MOD, anche se non verrà installata correttamente?';
 $txt['package_will_fail_popup_uninstall'] = 'Sei sicuro di voler continuare la disinstallazione di questa MOD, anche se la procedura darà luogo ad errori?';
+$txt['package_install'] = 'installation';
+$txt['package_uninstall'] = 'removal';
 $txt['package_install_now'] = 'Installa adesso';
 $txt['package_uninstall_now'] = 'Disinstalla adesso';
 $txt['package_other_themes'] = 'Installa in altri temi';
@@ -125,11 +138,13 @@ $txt['package_uninstall_done'] = 'Il pacchetto è stato disinstallato e non dovre
 $txt['package_uninstall_cannot'] = 'Questo pacchetto non può essere disinstallato poiché non esiste la procedura di disinstallazione!<br /><br />Contatta l\'autore del pacchetto per ulteriori informazioni.';
 
 $txt['package_install_options'] = 'Opzioni di disinstallazione';
+$txt['package_install_options_desc'] = 'Set various options for how the package manager installs modifications, including backups and ftp access';
 $txt['package_install_options_ftp_why'] = 'L\'utilizzo della funzionalità FTP della Gestione pacchetti è la via più semplice per evitare la modifica manuale, tramite FTP, dei permessi in scrittura dei file per il corretto funzionamento della gestione pacchetti.<br />Qui è possibile impostare i valori predefiniti per alcuni campi.';
 $txt['package_install_options_ftp_server'] = 'Server FTP';
 $txt['package_install_options_ftp_port'] = 'Porta';
 $txt['package_install_options_ftp_user'] = 'Nome utente';
 $txt['package_install_options_make_backups'] = 'Crea versioni di backup dei file sostituiti aggiungendo una tilde (~) alla fine del nome.';
+$txt['package_install_options_make_full_backups'] = 'Create an entire backup (excluding smileys, avatars and attachments) of the SMF install.';
 
 $txt['package_ftp_necessary'] = 'Informazioni FTP necessarie';
 $txt['package_ftp_why'] = 'Alcuni file che Gestione pacchetti deve modificare non sono accessibili in scrittura. è necessario accedere via FTP e modificare manualmente i permessi dei file, oppure creare i file e le cartelle. Le informazioni FTP potrebbero essere conservate temporaneamente per il corretto funzionamento della Gestione pacchetti.';
@@ -184,6 +199,8 @@ $txt['package_advanced_button'] = 'Avanzato';
 $txt['package_advanced_options'] = 'Opzioni avanzate';
 $txt['package_apply'] = 'Applica';
 $txt['package_emulate'] = 'Emula versione';
+$txt['package_emulate_install'] = 'Install Emulating:';
+$txt['package_emulate_uninstall'] = 'Uninstall Emulating:';
 $txt['package_emulate_revert'] = 'Ripristina il valore predefinito';
 $txt['package_emulate_desc'] = 'A volte capita che dei pacchetti risultino bloccati a versioni precedenti di SMF e che continuino a rimanere compatibili con quelle più recenti. Qui puoi decidere di &quot;emulare&quot; una diversa versione di SMF all\'interno del gestore pacchetti.';
 
@@ -254,5 +271,7 @@ $txt['package_confirm_go_back'] = 'Torna indietro';
 
 $txt['package_readme_default'] = 'Predefinito';
 $txt['package_available_readme_language'] = 'Traduzioni disponibili per file Leggimi:';
+$txt['package_license_default'] = 'Default';
+$txt['package_available_license_language'] = 'Available License Languages:';
 
 ?>

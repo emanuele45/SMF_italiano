@@ -1,7 +1,6 @@
 <?php
-// Version: 2.0; Themes
+// Version: ; Themes
 
-// Important! Before editing these language files please read the text at the top of index.english.php.
 $txt['themeadmin_explain'] = 'I temi permettono di modificare l\'aspetto del proprio forum. Queste impostazioni determinano la scelta dei temi e quali di essi vengono visualizzati per i visitatori e per gli utenti.';
 
 $txt['theme_allow'] = 'Consenti agli utenti di selezionare i propri temi.';
@@ -64,6 +63,9 @@ $txt['forum_width_desc'] = 'Impostare la larghezza del forum. Esempi: 950px, 80%
 $txt['enable_random_news'] = 'Abilita nella testata del forum la riga contenente le news (visualizzate a rotazione).';
 $txt['show_group_key'] = 'Mostra legenda dei gruppi nell\'indice del forum';
 $txt['additional_options_collapsable'] = 'Consenti di contrarre le opzioni aggiuntive per i messaggi';
+$txt['message_index_preview'] = 'Show post previews on the message index';
+$txt['message_index_preview_first'] = 'When using post previews, Show the text of the first post';
+$txt['message_index_preview_first_desc'] = 'Leave un-checked to show the text of the last post instead';
 $txt['allow_no_censored'] = 'Consenti agli utenti di disattivare la censura delle parole';
 $txt['who_display_viewing'] = 'Visualizza chi sta leggendo l\'indice e i messaggi';
 $txt['who_display_viewing_off'] = 'Non mostrare';
@@ -72,8 +74,6 @@ $txt['who_display_viewing_names'] = 'Mostra i nomi degli utenti';
 $txt['disable_recent_posts'] = 'Disattiva la visualizzazione dei messaggi recenti';
 $txt['enable_single_post'] = 'Abilita messaggi singoli';
 $txt['enable_multiple_posts'] = 'Abilita messaggi multipli';
-$txt['enable_inline_links'] = 'Abilita i link su singola riga';
-$txt['inline_desc'] = 'La posizione corrente nel forum verrà visualizzata in una singola riga e non con una visualizzazione ad albero';
 $txt['show_stats_index'] = 'Mostra le statistiche nell\'indice dell\'area';
 $txt['latest_members'] = 'Visualizza l\'ultimo utente registrato nel forum';
 $txt['last_modification'] = 'Visualizza la data di ultima modifica nei messaggi modificati';
@@ -124,7 +124,7 @@ $txt['themeadmin_reset_remove_confirm'] = 'Vuoi azzerare tutte le impostazioni d
 $txt['themeadmin_reset_options_info'] = 'Le opzioni qui sotto azzereranno le opzioni per <em>tutti</em>. Per modificare un\'opzione, selezionare &quot;Modifica&quot; nel riquadro accanto ad essa e quindi selezionare un valore. Per utilizzare il valore predefinito, selezionare &quot;elimina&quot;. Altrimenti utilizzare &quot;non modificare&quot; per lasciarla così com\'è.';
 $txt['themeadmin_reset_options_change'] = 'Modifica';
 $txt['themeadmin_reset_options_none'] = 'Non modificare';
-$txt['themeadmin_reset_options_remove'] = 'Rimuovi';
+$txt['themeadmin_reset_options_default'] = 'Default';
 
 $txt['themeadmin_edit_browse'] = 'Sfoglia i template e i file di questo tema.';
 $txt['themeadmin_edit_style'] = 'Modifica il foglio di stile per questo tema.';

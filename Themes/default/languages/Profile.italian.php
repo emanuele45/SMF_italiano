@@ -1,5 +1,5 @@
 <?php
-// Version: 2.0; Profile
+// Version: ; Profile
 
 global $scripturl, $context;
 
@@ -9,6 +9,9 @@ $txt['website_url'] = 'URL sito web';
 $txt['signature'] = 'Firma';
 $txt['profile_posts'] = 'Post';
 $txt['change_profile'] = 'Aggiorna profilo';
+$txt['preview_signature'] = 'Preview signature';
+$txt['current_signature'] = 'Current signature';
+$txt['signature_preview'] = 'Signature preview';
 $txt['delete_user'] = 'Elimina utente';
 $txt['current_status'] = 'Stato corrente:';
 $txt['personal_text'] = 'Testo personale';
@@ -43,7 +46,6 @@ $txt['max_sig_characters'] = 'Limite caratteri: %1$d; rimanenti:';
 $txt['send_member_pm'] = 'Invia a questo utente un messaggio privato';
 $txt['hidden'] = 'nascosto';
 $txt['current_time'] = 'Ora corrente del forum';
-$txt['digits_only'] = 'Il campo \'numero dei messaggi\' può contenere solo cifre.';
 
 $txt['language'] = 'Lingua';
 $txt['avatar_too_big'] = 'L\'immagine dell\'avatar è troppo grande, è necessario ridimensionarla e riprovare (max';
@@ -151,7 +153,9 @@ $txt['showPosts'] = 'Visualizza post';
 $txt['showPosts_help'] = 'Questa sezione ti permette di visualizzare tutti i post inviati da questo utente. N.B: puoi vedere solo i post relativi alle aree dove hai l\'accesso.';
 $txt['showMessages'] = 'Post';
 $txt['showTopics'] = 'Topics';
+$txt['showDisregarded'] = 'Disregarded topics';
 $txt['showAttachments'] = 'Attachments';
+$txt['viewWarning_help'] = 'This section allows you to view all warnings issued to this member.';
 $txt['statPanel'] = 'Visualizza statistiche';
 $txt['editBuddyIgnoreLists'] = 'Lista Amici/Utenti Ignorati';
 $txt['editBuddies'] = 'Modifica amici';
@@ -159,6 +163,7 @@ $txt['editIgnoreList'] = 'Modifica la lista degli utenti ignorati';
 $txt['trackUser'] = 'Traccia utente';
 $txt['trackActivity'] = 'Attività';
 $txt['trackIP'] = 'Indirizzo IP';
+$txt['trackLogins'] = 'Logins';
 
 $txt['authentication'] = 'Autenticazione';
 $txt['change_authentication'] = 'Da questa sezione puoi cambiare come si effettua il login al forum . Puoi scegliere di utilizzare un account OpenID per l\'identificazione, come di passare ad una username e una password.';
@@ -166,7 +171,6 @@ $txt['change_authentication'] = 'Da questa sezione puoi cambiare come si effettu
 $txt['profileEdit'] = 'Modifica profilo';
 $txt['account_info'] = 'Queste sono le impostazioni del proprio account. Questa pagina contiene tutte le informazioni importanti che identificano l\'utente sul forum. Per ragioni di sicurezza, è necessario inserire la password corrente per modificarle.';
 $txt['forumProfile_info'] = 'In questa pagina è possibile modificare le informazioni personali. Questi dati verranno utilizzati nel forum. ' . $context['forum_name_html_safe'] . '. Se non si desidera condividere alcune informazioni, sarà sufficiente non inserirle - nessuna informazione è obbligatoria.';
-$txt['theme'] = 'Aspetto e visualizzazione';
 $txt['theme_info'] = 'Questa sezione permette di personalizzare la visualizzazione e l\'aspetto del forum.';
 $txt['notification'] = 'Notifiche ed e-mail';
 $txt['notification_info'] = 'SMF permette di ricevere notifiche di risposta alle discussioni, della creazione di nuove discussioni e di annunci sul forum. In questa sezione è possibile modificare queste impostazioni oppure visualizzare le discussioni e le sezioni per cui si stanno ricevendo notifiche.';
@@ -196,12 +200,14 @@ $txt['members_from_ip'] = 'utenti con IP (intervallo)';
 $txt['members_in_range'] = 'Utenti appartenenti allo stesso intervallo IP';
 $txt['messages_from_ip'] = 'Messaggi inseriti da questo IP (intervallo)';
 $txt['messages_from_ip_desc'] = 'Elenco di tutti i messaggi inseriti da questo IP (intervallo).';
+$txt['trackLogins_desc'] = 'Below is a list of all times this account was logged into.';
 $txt['most_recent_ip'] = 'Indirizzi IP più recenti';
 $txt['why_two_ip_address'] = 'Perché sono elencati due indirizzi IP?';
 $txt['no_errors_from_ip'] = 'Nessun messaggio d\'errore proveniente da questo IP (intervallo)';
 $txt['no_errors_from_user'] = 'Nessun messaggio d\'errore proveniente da questo utente';
 $txt['no_members_from_ip'] = 'Nessun utente disponibile per l\'intervallo IP specificato';
 $txt['no_messages_from_ip'] = 'Nessun messaggio disponibile per l\'intervallo IP specificato';
+$txt['trackLogins_none_found'] = 'No recent logins where found';
 $txt['none'] = 'Nessuno';
 $txt['own_profile_confirm'] = 'Si desidera eliminare il proprio account?';
 $txt['view_ips_by'] = 'Visualizza gli IP usati da';
@@ -284,6 +290,7 @@ $txt['display_quick_reply'] = 'Utilizza la risposta rapida: ';
 $txt['display_quick_reply1'] = 'non visualizzare';
 $txt['display_quick_reply2'] = 'visualizza, nascondi come impostazione predefinita';
 $txt['display_quick_reply3'] = 'visualizza, mostra come impostazione predefinita';
+$txt['use_editor_quick_reply'] = 'Use full editor in Quick Reply';
 $txt['display_quick_mod'] = 'Mostra moderazione veloce come';
 $txt['display_quick_mod_none'] = 'non visualizzare';
 $txt['display_quick_mod_check'] = 'caselle da spuntare';
@@ -305,6 +312,7 @@ $txt['show_member_topics'] = 'Visualizza topic dell\'utente';
 $txt['show_member_attachments'] = 'Visualizza allegati dell\'utente';
 $txt['show_posts_none'] = 'Nessun post è stato ancora aggiunto.';
 $txt['show_topics_none'] = 'Nessun topic è stato ancora inviato.';
+$txt['disregarded_topics_none'] = 'You don\'t have any topic in the disregarded list.';
 $txt['show_attachments_none'] = 'Nessun allegato è stato ancora inserito.';
 $txt['show_attach_filename'] = 'Filename';
 $txt['show_attach_downloads'] = 'Download';

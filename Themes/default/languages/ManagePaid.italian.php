@@ -1,9 +1,8 @@
 <?php
-// Version: 2.0; ManagePaid
+// Version: ; ManagePaid
 
 global $boardurl;
 
-// Important! Before editing these language files please read the text at the top of index.english.php.
 // Symbols.
 $txt['usd_symbol'] = '$%1.2f';
 $txt['eur_symbol'] = '&euro;%1.2f';
@@ -142,7 +141,7 @@ $txt['edit_subscriber'] = 'Modifica utente iscritto';
 $txt['delete_selected'] = 'Rimuovi selezionato/i';
 $txt['complete_selected'] = 'Completa selezionato/i';
 
-// !!! These strings are used in conjunction with JavaScript.  Use numeric entities.
+// @todo These strings are used in conjunction with JavaScript.  Use numeric entities.
 $txt['delete_are_sure'] = 'Sei sicuro di voler eliminare tutti i dati relativi alle sottoscrizioni selezionate?';
 $txt['complete_are_sure'] = 'Sei sicuro di voler completare le sottoscrizioni selezionate?';
 
@@ -152,7 +151,6 @@ $txt['start_date_and_time'] = 'Data di inizio ed ora';
 $txt['end_date_and_time'] = 'Data di scadenza ed ora';
 $txt['edit'] = 'MODIFICA';
 $txt['one_username'] = 'Per favore, inserisci una sola username.';
-$txt['hour'] = 'Ora';
 $txt['minute'] = 'Minuto';
 $txt['error_member_not_found'] = 'L\'utente inserito non è stato trovato';
 $txt['member_already_subscribed'] = 'Questo utente è segnato per questa sottoscrizione. Per favore, modifica la loro sottoscrizione esistente.';

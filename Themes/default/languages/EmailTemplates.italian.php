@@ -1,9 +1,8 @@
 <?php
-// Version: 2.0; EmailTemplates
+// Version: ; EmailTemplates
 
-global $context, $birthdayEmails;
+global $context, $txtBirthdayEmails;
 
-// Important! Before editing these language files please read the text at the top of index.english.php.
 // Since all of these strings are being used in emails, numeric entities should be used.
 // Do not translate anything that is between {}, they are used as replacement variables and MUST remain exactly how they are.
 //   Additionally do not translate the @additioinal_parmas: line or the variable names in the lines that follow it.  You may
@@ -14,1047 +13,641 @@ $txt['scheduled_approval_email_msg'] = 'I seguenti post sono in attesa di approv
 $txt['scheduled_approval_email_attach'] = 'I seguenti allegati sono in attesa di approvazione:';
 $txt['scheduled_approval_email_event'] = 'I seguenti eventi sono in attesa di approvazione:';
 
-$txt['emails'] = array(
-	'resend_activate_message' => array(
-		/*
-			@additional_params: resend_activate_message
-				REALNAME: The display name for the member receiving the email.
-				USERNAME:  The user name for the member receiving the email.
-				ACTIVATIONLINK:  The url link to activate the member's account.
-				ACTIVATIONCODE:  The code needed to activate the member's account.
-				ACTIVATIONLINKWITHOUTCODE: The url to the page where the activation code can be entered.
-				FORGOTPASSWORDLINK: The url to the "forgot password" page.
-			@description:
-		*/
-		'subject' => 'Benvenuto in {FORUMNAME}',
-		'body' => 'Grazie per esserti registrato su {FORUMNAME}. Il tuo username è {USERNAME}. Se dimentichi la tua password, puoi resettarla visitando {FORGOTPASSWORDLINK}.
+$txt['resend_activate_message_subject'] = 'Welcome to {FORUMNAME}';
+$txt['resend_activate_message_body'] = 'Thank you for registering at {FORUMNAME}. Your username is {USERNAME}. If you forget your password, you can reset it by visiting {FORGOTPASSWORDLINK}.
 
-Prima di poter effettuare il login, devi attivare il tuo account. Per farlo, segui questo link:
+Before you can login, you must first activate your account by selecting the following link:
 
 {ACTIVATIONLINK}
 
-Se riscontri problemi nell\'attivazione, visita {ACTIVATIONLINKWITHOUTCODE} ed immetti il codice "{ACTIVATIONCODE}".
+Should you have any problems with the activation, please visit {ACTIVATIONLINKWITHOUTCODE} and enter the code "{ACTIVATIONCODE}".
 
-{REGARDS}',
-	),
+{REGARDS}';
 
-	'resend_pending_message' => array(
-		/*
-			@additional_params: resend_pending_message
-				REALNAME: The display name for the member receiving the email.
-				USERNAME:  The user name for the member receiving the email.
-			@description:
-		*/
-		'subject' => 'Benvenuto in {FORUMNAME}',
-		'body' => 'La tua richiesta di registrazione in {FORUMNAME} è stata ricevuta, {REALNAME}.
+$txt['resend_pending_message_subject'] = 'Welcome to {FORUMNAME}';
+$txt['resend_pending_message_body'] = 'Your registration request at {FORUMNAME} has been received, {REALNAME}.
 
-Il nome utente da te registrato è {USERNAME}.
+The username you registered with was {USERNAME}.
 
-Prima di poter effettuare il login ed iniziare ad utilizzare il forum, la tua richiesta dovrà essere esamitata ed approvata. Al termine della procedura riceverai una nuova e-mail da questo indirizzo.
+Before you can login and start using the forum, your request will be reviewed and approved.  When this happens, you will receive another email from this address.
 
-{REGARDS}',
-	),
-	'mc_group_approve' => array(
-		/*
-			@additional_params: mc_group_approve
-				USERNAME: The user name for the member receiving the email.
-				GROUPNAME: The name of the membergroup that the user was accepted into.
-			@description: The request to join a particular membergroup has been accepted.
-		*/
-		'subject' => 'Approvazione accesso al gruppo {GROUPNAME}',
-		'body' => '{USERNAME},
+{REGARDS}';
 
-Siamo lieti di comunicarti che la tua richiesta di entrare a far parte del gruppo "{GROUPNAME}" in {FORUMNAME}, ed il tuo account è stato aggiornato per includere tutte le nuove funzioni del gruppo.
+$txt['mc_group_approve_subject'] = 'Group Membership Approval';
+$txt['mc_group_approve_body'] = '{USERNAME},
 
-{REGARDS}',
-	),
-	'mc_group_reject' => array(
-		/*
-			@additional_params: mc_group_reject
-				USERNAME: The user name for the member receiving the email.
-				GROUPNAME: The name of the membergroup that the user was rejected from.
-			@description: The request to join a particular membergroup has been rejected.
-		*/
-		'subject' => 'Rifiuto accesso al gruppo {GROUPNAME}',
-		'body' => '{USERNAME},
+We\'re pleased to notify you that your application to join the "{GROUPNAME}" group at {FORUMNAME} has been accepted, and your account has been updated to include this new membergroup.
 
-Ci dispiace comunicarti che la tua richiesta di entrare a far parte del gruppo  "{GROUPNAME}" in {FORUMNAME} è stata rifiutata.
+{REGARDS}';
 
-{REGARDS}',
-	),
-	'mc_group_reject_reason' => array(
-		/*
-			@additional_params: mc_group_reject_reason
-				USERNAME: The user name for the member receiving the email.
-				GROUPNAME: The name of the membergroup that the user was rejected from.
-				REASON: Reason for the rejection.
-			@description: The request to join a particular membergroup has been rejected with a reason given.
-		*/
-		'subject' => 'Group Membership Rejection',
-		'body' => '{USERNAME},
+$txt['mc_group_reject_subject'] = 'Group Membership Rejection';
+$txt['mc_group_reject_body'] = '{USERNAME},
 
-Ci dispiace comunicarti che la tua richiesta di entrare a far parte del gruppo  "{GROUPNAME}" in {FORUMNAME} è stata rifiutata.
+We\'re sorry to notify you that your application to join the "{GROUPNAME}" group at {FORUMNAME} has been rejected.
 
-Questo per via della seguente ragione: {REASON}
+{REGARDS}';
 
-{REGARDS}',
-	),
-	'admin_approve_accept' => array(
-		/*
-			@additional_params: admin_approve_accept
-                NAME: The display name of the member.
-				USERNAME: The user name for the member receiving the email.
-				PROFILELINK: The URL of the profile page.
-				FORGOTPASSWORDLINK: The URL of the "forgot password" page.
-			@description:
-		*/
-		'subject' => 'Benvenuto in {FORUMNAME}',
-		'body' => 'Benvenuto, {USERNAME}!
+$txt['mc_group_reject_reason_subject'] = 'Group Membership Rejection';
+$txt['mc_group_reject_reason_body'] = '{USERNAME},
 
-Il tuo account è stato attivato manualmente dall\'amministratore ed ora puoi effettuare l\'accesso ed utilizzare il forum. Il tuo nome utente è: {USERNAME}. Se dimentichi la tua password, puoi cambiarla su {FORGOTPASSWORDLINK}.
+We\'re sorry to notify you that your application to join the "{GROUPNAME}" group at {FORUMNAME} has been rejected.
 
-{REGARDS}',
-	),
-	'admin_approve_activation' => array(
-		/*
-			@additional_params: admin_approve_activation
-				USERNAME: The user name for the member receiving the email.
-				ACTIVATIONLINK:  The url link to activate the member's account.
-				ACTIVATIONLINKWITHOUTCODE: The url to the page where the activation code can be entered.
-				ACTIVATIONCODE: The activation code.
-			@description:
-		*/
-		'subject' => 'Benvenuto in {FORUMNAME}',
-		'body' => 'Benvenuto, {USERNAME}!
+This is due to the following reason: {REASON}
 
-Il tuo account su {FORUMNAME} è stato approvato dall\'amministratore. Ora devi solamente verificarlo cliccando sul collegamento qui sotto:
+{REGARDS}';
+
+$txt['admin_approve_accept_subject'] = 'Welcome to {FORUMNAME}';
+$txt['admin_approve_accept_body'] = 'Welcome, {NAME}
+
+Your account has been activated manually by the admin and you can now login and post. Your username is: {USERNAME}. If you forget your password, you can change it at {FORGOTPASSWORDLINK}.
+
+{REGARDS}';
+
+$txt['admin_approve_activation_subject'] = 'Welcome to {FORUMNAME}';
+$txt['admin_approve_activation_body'] = 'Welcome, {USERNAME}!
+
+Your account on {FORUMNAME} has been approved by the forum administrator. Before you can login, you must first activate your account by selecting the following link:
 
 {ACTIVATIONLINK}
 
-Se riscontri problemi nell\'attivazione, visita {ACTIVATIONLINKWITHOUTCODE} ed immetti il codice "{ACTIVATIONCODE}".
+Should you have any problems with the activation, please visit {ACTIVATIONLINKWITHOUTCODE} and enter the code "{ACTIVATIONCODE}".
 
-{REGARDS}',
-	),
-	'admin_approve_reject' => array(
-		/*
-			@additional_params: admin_approve_reject
-				USERNAME: The user name for the member receiving the email.
-			@description:
-		*/
-		'subject' => 'Registrazione Rifiutata',
-		'body' => '{USERNAME},
+{REGARDS}';
 
-La tua registrazione su {FORUMNAME} è stata rifiutata.
+$txt['admin_approve_reject_subject'] = 'Registration Rejected';
+$txt['admin_approve_reject_body'] = '{USERNAME},
 
-{REGARDS}',
-	),
-	'admin_approve_delete' => array(
-		/*
-			@additional_params: admin_approve_delete
-				USERNAME: The user name for the member receiving the email.
-			@description:
-		*/
-		'subject' => 'Account Rimosso',
-		'body' => '{USERNAME},
+Regrettably, your application to join {FORUMNAME} has been rejected.
 
-Il tuo account su {FORUMNAME} è stato rimosso. La causa potrebbe essere che non l\'hai mai attivato, in questo caso puoi effettuare nuovamente la registrazione.
+{REGARDS}';
 
-{REGARDS}',
-	),
-	'admin_approve_remind' => array(
-		/*
-			@additional_params: admin_approve_remind
-				USERNAME: The user name for the member receiving the email.
-				ACTIVATIONLINK:  The url link to activate the member's account.
-				ACTIVATIONLINKWITHOUTCODE: The url to the page where the activation code can be entered.
-				ACTIVATIONCODE: The activation code.
-			@description:
-		*/
-		'subject' => 'Promemoria Registrazione',
-		'body' => '{USERNAME},
-Non hai ancora attivato il tuo account su {FORUMNAME}.
+$txt['admin_approve_delete_subject'] = 'Account Deleted';
+$txt['admin_approve_delete_body'] = '{USERNAME},
 
-Usa il collegamento qui sotto per farlo:
+Your account on {FORUMNAME} has been deleted.  This may be because you never activated your account, in which case you should be able to register again.
+
+{REGARDS}';
+
+$txt['admin_approve_remind_subject'] = 'Registration Reminder';
+$txt['admin_approve_remind_body'] = '{USERNAME},
+You still have not activated your account at {FORUMNAME}.
+
+Please use the link below to activate your account:
 {ACTIVATIONLINK}
 
-Se riscontri problemi nell\'attivazione, visita {ACTIVATIONLINKWITHOUTCODE} ed immetti il codice "{ACTIVATIONCODE}".
+Should you have any problems with the activation, please visit {ACTIVATIONLINKWITHOUTCODE} and enter the code "{ACTIVATIONCODE}".
 
-{REGARDS}',
-	),
-	'admin_register_activate' => array(
-		/*
-			@additional_params:
-				USERNAME: The user name for the member receiving the email.
-				ACTIVATIONLINK:  The url link to activate the member's account.
-				ACTIVATIONLINKWITHOUTCODE: The url to the page where the activation code can be entered.
-				ACTIVATIONCODE: The activation code.
-			@description:
-		*/
-		'subject' => 'Benvenuto in {FORUMNAME}',
-		'body' => 'Grazie per esserti registrato su {FORUMNAME}. Il tuo username è {USERNAME} e la tua password è {PASSWORD}.
+{REGARDS}';
 
-Prima di poter effettuare il login, devi attivare il tuo account. Per farlo, segui questo link:
+$txt['admin_register_activate_subject'] = 'Welcome to {FORUMNAME}';
+$txt['admin_register_activate_body'] = 'Thank you for registering at {FORUMNAME}. Your username is {USERNAME} and your password is {PASSWORD}.
+
+Before you can login, you must first activate your account by selecting the following link:
+
 {ACTIVATIONLINK}
 
-Se riscontri problemi nell\'attivazione, visita {ACTIVATIONLINKWITHOUTCODE} ed immetti il codice "{ACTIVATIONCODE}".
+Should you have any problems with the activation, please visit {ACTIVATIONLINKWITHOUTCODE} and enter the code "{ACTIVATIONCODE}".
 
-{REGARDS}',
-	),
-	'admin_register_immediate' => array(
-		'subject' => 'Benvenuto in {FORUMNAME}',
-		'body' => 'Grazie per esserti registrato su {FORUMNAME}. Il tuo username è {USERNAME} e la tua password è {PASSWORD}.
+{REGARDS}';
 
-{REGARDS}',
-	),
-	'new_announcement' => array(
-		/*
-			@additional_params: new_announcement
-				TOPICSUBJECT: The subject of the topic being announced.
-				MESSAGE: The message body of the first post of the announced topic.
-				TOPICLINK: A link to the topic being announced.
-			@description:
+$txt['admin_register_immediate_subject'] = 'Welcome to {FORUMNAME}';
+$txt['admin_register_immediate_body'] = 'Thank you for registering at {FORUMNAME}. Your username is {USERNAME} and your password is {PASSWORD}.
 
-		*/
-		'subject' => 'Nuovo annuncio: {TOPICSUBJECT}',
-		'body' => '{MESSAGE}
+{REGARDS}';
 
-Per annullare la sottoscrizione a questi annunci, effettua l\'accesso al forum e deseleziona l\'opzione "Ricevi annunci ed importanti notifiche tramite e-mail" nel tuo profilo.
+$txt['new_announcement_subject'] = 'New announcement: {TOPICSUBJECT}';
+$txt['new_announcement_body'] = '{MESSAGE}
 
-Puoi visualizzare l\'annuncio completo cliccando sul collegamento qui sotto:
+To unsubscribe from these announcements, login to the forum and uncheck "Receive forum announcements and important notifications by email." in your profile.
+
+You can view the full announcement by following this link:
 {TOPICLINK}
 
-{REGARDS}',
-	),
-	'notify_boards_once_body' => array(
-		/*
-			@additional_params: notify_boards_once_body
-				TOPICSUBJECT: The subject of the topic causing the notification
-				TOPICLINK: A link to the topic.
-				MESSAGE: This is the body of the message.
-				UNSUBSCRIBELINK: Link to unsubscribe from notifications.
-			@description:
-		*/
-		'subject' => 'Nuovo topic: {TOPICSUBJECT}',
-		'body' => 'Un nuovo topic, \'{TOPICSUBJECT}\', è stato creato nella sezione che stai seguendo.
+{REGARDS}';
 
-Puoi visualizzarlo cliccando su:
+$txt['notify_boards_once_body_subject'] = 'New Topic: {TOPICSUBJECT}';
+$txt['notify_boards_once_body_body'] = 'A new topic, \'{TOPICSUBJECT}\', has been made on a board you are watching.
+
+You can see it at
 {TOPICLINK}
 
-Altri topic potrebbero essere postati, ma non riceverai altre notifiche fino a quando non tornerai in quella sezione per leggerne alcuni.
+More topics may be posted, but you won\'t receive more email notifications until you return to the board and read some of them.
 
-Il testo del topic è il seguente:
+The text of the topic is shown below:
 {MESSAGE}
 
-Per annullare la sottoscrizione alle notifiche di nuovi topic in questa sezione fai click su questo collegamento:
+Unsubscribe to new topics from this board by using this link:
 {UNSUBSCRIBELINK}
 
-{REGARDS}',
-	),
-	'notify_boards_once' => array(
-		/*
-			@additional_params: notify_boards_once
-				TOPICSUBJECT: The subject of the topic causing the notification
-				TOPICLINK: A link to the topic.
-				UNSUBSCRIBELINK: Link to unsubscribe from notifications.
-			@description:
-		*/
-		'subject' => 'Nuovo topic: {TOPICSUBJECT}',
-		'body' => 'Un nuovo topic, \'{TOPICSUBJECT}\', è stato creato nella sezione che stai seguendo.
+{REGARDS}';
 
-Puoi visualizzarlo cliccando su:
+$txt['notify_boards_once_subject'] = 'New Topic: {TOPICSUBJECT}';
+$txt['notify_boards_once_body'] = 'A new topic, \'{TOPICSUBJECT}\', has been made on a board you are watching.
+
+You can see it at
 {TOPICLINK}
 
-Altri topic potrebbero essere postati, ma non riceverai altre notifiche fino a quando non tornerai in quella sezione per leggerne alcuni.
+More topics may be posted, but you won\'t receive more email notifications until you return to the board and read some of them.
 
-Per annullare la sottoscrizione alle notifiche di nuovi topic in questa sezione fai click su questo collegamento:
+Unsubscribe to new topics from this board by using this link:
 {UNSUBSCRIBELINK}
 
-{REGARDS}',
-	),
-	'notify_boards_body' => array(
-		/*
-			@additional_params: notify_boards_body
-				TOPICSUBJECT: The subject of the topic causing the notification
-				TOPICLINK: A link to the topic.
-				MESSAGE: This is the body of the message.
-				UNSUBSCRIBELINK: Link to unsubscribe from notifications.
-			@description:
-		*/
-		'subject' => 'Nuovo topic: {TOPICSUBJECT}',
-		'body' => 'Un nuovo topic, \'{TOPICSUBJECT}\', è stato creato nella sezione che stai seguendo.
+{REGARDS}';
 
-Puoi visualizzarlo cliccando su:
+$txt['notify_boards_body_subject'] = 'New Topic: {TOPICSUBJECT}';
+$txt['notify_boards_body_body'] = 'A new topic, \'{TOPICSUBJECT}\', has been made on a board you are watching.
+
+You can see it at
 {TOPICLINK}
 
-Il testo del topic è il seguente:
+The text of the topic is shown below:
 {MESSAGE}
 
-Per annullare la sottoscrizione alle notifiche di nuovi topic in questa sezione fai click su questo collegamento:
+Unsubscribe to new topics from this board by using this link:
 {UNSUBSCRIBELINK}
 
-{REGARDS}',
-	),
-	'notify_boards' => array(
-		/*
-			@additional_params: notify_boards
-				TOPICSUBJECT: The subject of the topic causing the notification
-				TOPICLINK: A link to the topic.
-				UNSUBSCRIBELINK: Link to unsubscribe from notifications.
-			@description:
-		*/
-		'subject' => 'Nuovo topic: {TOPICSUBJECT}',
-		'body' => 'Un nuovo topic, \'{TOPICSUBJECT}\', è stato creato nella sezione che stai seguendo.
+{REGARDS}';
 
-Puoi visualizzarlo cliccando su:
+$txt['notify_boards_subject'] = 'New Topic: {TOPICSUBJECT}';
+$txt['notify_boards_body'] = 'A new topic, \'{TOPICSUBJECT}\', has been made on a board you are watching.
+
+You can see it at
 {TOPICLINK}
 
-Per annullare la sottoscrizione alle notifiche di nuovi topic in questa sezione fai click su questo collegamento:
+Unsubscribe to new topics from this board by using this link:
 {UNSUBSCRIBELINK}
 
-{REGARDS}',
-	),
-	'request_membership' => array(
-		/*
-			@additional_params: request_membership
-				RECPNAME: The name of the person recieving the email
-				APPYNAME: The name of the person applying for group membership
-				GROUPNAME: The name of the group being applied to.
-				REASON: The reason given by the applicant for wanting to join the group.
-				MODLINK: Link to the group moderation page.
-			@description:
-		*/
-		'subject' => 'Applicazione Nuovo Gruppo',
-		'body' => '{RECPNAME},
-		
-{APPYNAME} ha richiesto di diventare membro del gruppo "{GROUPNAME}". L\'utente ha dato la seguente motivazione:
+{REGARDS}';
+
+$txt['request_membership_subject'] = 'New Group Application';
+$txt['request_membership_body'] = '{RECPNAME},
+
+{APPYNAME} has requested membership to the "{GROUPNAME}" group. The user has given the following reason:
 
 {REASON}
 
-Puoi approvare o rifiutare questa applicazione clickando su questo link:
+You can approve or reject this application by clicking the link below:
 
 {MODLINK}
 
-{REGARDS}',
-	),
-	'paid_subscription_reminder' => array(
-		/*
-			@additional_params: scheduled_approval
-				REALNAME: The real (display) name of the person receiving the email.
-				PROFILE_LINK: Link to profile of member receiving email where can renew.
-				SUBSCRIPTION: Name of the subscription.
-				END_DATE: Date it expires.
-			@description:
-		*/
-		'subject' => 'Sottoscrizione in scadenza su {FORUMNAME}',
-		'body' => '{REALNAME},
+{REGARDS}';
 
-Una sottoscrizione a cui sei iscritto su {FORUMNAME} sta per scadere. Se ti sei abbonato e hai selezionato il rinnovo automatico non devi fare nulla - in caso contrario potresti volerti iscrivere nuovamente. Di seguito i dettagli:
+$txt['paid_subscription_reminder_subject'] = 'Subscription about to expire at {FORUMNAME}';
+$txt['paid_subscription_reminder_body'] = '{REALNAME},
 
-Nome Sottoscrizione: {SUBSCRIPTION}
-Scadenza: {END_DATE}
+A subscription you are subscribed to at {FORUMNAME} is about to expire. If when you took out the subscription you selected to auto-renew you need take no action - otherwise you may wish to consider subscribing once more. Details are below:
 
-Per modificare la sottoscrizione visita il seguente URL:
+Subscription Name: {SUBSCRIPTION}
+Expires: {END_DATE}
+
+To edit your subscriptions visit the following URL:
 {PROFILE_LINK}
 
-{REGARDS}',
-	),
-	'activate_reactivate' => array(
-		/*
-			@additional_params: activate_reactivate
-				ACTIVATIONLINK:  The url link to reactivate the member's account.
-				ACTIVATIONCODE:  The code needed to reactivate the member's account.
-			@description: 
-		*/
-		'subject' => 'Bentornato in {FORUMNAME}',
-		'body' => 'Per rivalidare il tuo indirizzo e-mail, il tuo account è stato momentaneamente disattivato. Clicca sul link seguente per riattivarlo:
+{REGARDS}';
+
+$txt['activate_reactivate_subject'] = 'Welcome back to {FORUMNAME}';
+$txt['activate_reactivate_body'] = 'In order to re-validate your email address, your account has been deactivated.  Click the following link to activate it again:
 {ACTIVATIONLINK}
 
-Sei riscontri qualche problema nell\'attivazione, usa il codice "{ACTIVATIONCODE}".
+Should you have any problems with activation, please visit {ACTIVATIONLINKWITHOUTCODE} and use the code "{ACTIVATIONCODE}".
 
-{REGARDS}',
-	),
-	'forgot_password' => array(
-		/*
-			@additional_params: forgot_password
-				REALNAME: The real (display) name of the person receiving the reminder.
-				REMINDLINK: The link to reset the password.
-				IP: The IP address of the requester.
-				MEMBERNAME: 
-			@description: 
-		*/
-		'subject' => 'Nuova password per {FORUMNAME}',
-		'body' => '{REALNAME},
-La funzione di recupero della password è stata attivata per il tuo account. Per impostare una nuova password clicca sul link seguente:
+{REGARDS}';
+
+$txt['forgot_password_subject'] = 'New password for {FORUMNAME}';
+$txt['forgot_password_body'] = 'Dear {REALNAME},
+This mail was sent because the \'forgot password\' function has been applied to your account. To set a new password, click the following link:
 {REMINDLINK}
 
 IP: {IP}
 Username: {MEMBERNAME}
 
-{REGARDS}',
-	),
-	'forgot_openid' => array(
-		/*
-			@additional_params: forgot_password
-				REALNAME: The real (display) name of the person receiving the reminder.
-				IP: The IP address of the requester.
-				OPENID: The members OpenID identity.
-			@description:
-		*/
-		'subject' => 'Promemoria OpenID per {FORUMNAME}',
-		'body' => 'Caro {REALNAME},
-Questa mail ti è stata inviata poichè la funzione \'forgot OpenID\' è stata applicata al tuo account. Qui di seguito trovi l\'OpenID a cui è associato il tuo account:
+{REGARDS}';
+
+$txt['forgot_openid_subject'] = 'OpenID reminder for {FORUMNAME}';
+$txt['forgot_openid_body'] = 'Dear {REALNAME},
+This mail was sent because the \'forgot OpenID\' function has been applied to your account. Below is the OpenID that your account is associated with:
 {OPENID}
 
 IP: {IP}
 Username: {MEMBERNAME}
 
-{REGARDS}',
-	),
-	'scheduled_approval' => array(
-		/*
-			@additional_params: scheduled_approval
-				REALNAME: The real (display) name of the person receiving the email.
-				BODY: The generated body of the mail.
-			@description:
-		*/
-		'subject' => 'Riepilogo dei post che richiedono l\'approvazione in {FORUMNAME}',
-		'body' => '{REALNAME},
-		
-Questa e-mail contiene un elenco di tutti gli elementi che attendono l\'approvazione in {FORUMNAME}.
+{REGARDS}';
+
+$txt['scheduled_approval_subject'] = 'Summary of posts awaiting approval at {FORUMNAME}';
+$txt['scheduled_approval_body'] = '{REALNAME},
+
+This email contains a summary of all items awaiting approval at {FORUMNAME}.
 
 {BODY}
 
-Accedi al forum per controllare questi elementi.
+Please log in to the forum to review these items.
 {SCRIPTURL}
 
-{REGARDS}',
-	),
+{REGARDS}';
 
-	'send_topic' => array(
-		/*
-			@additional_params: send_topic
-				TOPICSUBJECT: The subject of the topic being sent.
-				SENDERNAME: The name of the member sending the topic.
-				RECPNAME: The name of the person receiving the email.
-				TOPICLINK: A link to the topic being sent.
-			@description:
-		*/
-		'subject' => 'Topic: {TOPICSUBJECT} (Da: {SENDERNAME})',
-		'body' => '{RECPNAME},
-Vorrei segnalarti il topic "{TOPICSUBJECT}" su {FORUMNAME}. Per visualizzarlo clicca sul seguente link:
+$txt['send_topic_subject'] = 'Topic: {TOPICSUBJECT} (From: {SENDERNAME})';
+$txt['send_topic_body'] = 'Dear {RECPNAME},
+I want you to check out "{TOPICSUBJECT}" on {FORUMNAME}.  To view it, please click this link:
 
 {TOPICLINK}
 
-Grazie,
+Thanks,
 
-{SENDERNAME}',
-	),
-	'send_topic_comment' => array(
-		/*
-			@additional_params: send_topic_comment
-				TOPICSUBJECT: The subject of the topic being sent.
-				SENDERNAME: The name of the member sending the topic.
-				RECPNAME: The name of the person receiving the email.
-				TOPICLINK: A link to the topic being sent.
-				COMMENT: A comment left by the sender.
-			@description:
-		*/
-		'subject' => 'Topic: {TOPICSUBJECT} (Da: {SENDERNAME})',
-		'body' => '{RECPNAME},
-Vorrei segnalarti il topic "{TOPICSUBJECT}" su {FORUMNAME}. Per visualizzarlo clicca sul seguente link:
+{SENDERNAME}';
+
+$txt['send_topic_comment_subject'] = 'Topic: {TOPICSUBJECT} (From: {SENDERNAME})';
+$txt['send_topic_comment_body'] = 'Dear {RECPNAME},
+I want you to check out "{TOPICSUBJECT}" on {FORUMNAME}.  To view it, please click this link:
 
 {TOPICLINK}
 
-È stato aggiunto anche un commento riguardo il topic:
+A comment has also been added regarding this topic:
 {COMMENT}
 
-Grazie,
+Thanks,
 
-{SENDERNAME}',
-	),
-	'send_email' => array(
-		/*
-			@additional_params: send_email
-				EMAILSUBJECT: The subject the user wants to email.
-				EMAILBODY: The body the user wants to email.
-				SENDERNAME: The name of the member sending the email.
-				RECPNAME: The name of the person receiving the email.
-			@description:
-		*/
-		'subject' => '{EMAILSUBJECT}',
-		'body' => '{EMAILBODY}',
-	),
-	'report_to_moderator' => array(
-		/* 
-			@additional_params: report_to_moderator
-				TOPICSUBJECT: The subject of the reported post.
-				POSTERNAME: The report post's author's name.
-				REPORTERNAME: The name of the person reporting the post.
-				TOPICLINK: The url of the post that is being reported.
-				REPORTLINK: The url of the moderation center report.
-				COMMENT: The comment left by the reporter, hopefully to explain why they are reporting the post.
-			@description: When a user reports a post this email is sent out to moderators and admins of that board.
-		*/
-		'subject' => 'Segnalazione post: {TOPICSUBJECT} di {POSTERNAME}',
-		'body' => 'Il seguente post, "{TOPICSUBJECT}" di {POSTERNAME} è stato segnalato da {REPORTERNAME} nella sezione sotto tua moderazione:
+{SENDERNAME}';
 
-Il topic: {TOPICLINK}
-Centro Moderazione: {REPORTLINK}
+$txt['send_email_subject'] = '{EMAILSUBJECT}';
+$txt['send_email_body'] = '{EMAILBODY}';
 
-L\'utente che ha effettuato la segnalazione ha inserito il seguente commento:
+$txt['report_to_moderator_subject'] = 'Reported post: {TOPICSUBJECT} by {POSTERNAME}';
+$txt['report_to_moderator_body'] = 'The following post, "{TOPICSUBJECT}" by {POSTERNAME} has been reported by {REPORTERNAME} on a board you moderate:
+
+The topic: {TOPICLINK}
+Moderation center: {REPORTLINK}
+
+The reporter has made the following comment:
 {COMMENT}
 
-{REGARDS}',
-	),
-	'change_password' => array(
-		/*
-			@additional_params: change_password
-				USERNAME: The user name for the member receiving the email.
-				PASSWORD: The password for the member.
-			@description:
-		*/
-		'subject' => 'Nuova password',
-		'body' => '{USERNAME}!
+{REGARDS}';
 
-I tuoi dati di accesso su {FORUMNAME} sono stati modificati e la tua password azzerata. Di seguito i tuoi nuovi dati.
+$txt['change_password_subject'] = 'New Password Details';
+$txt['change_password_body'] = 'Dear, {USERNAME}
 
-Il tuo nome utente è "{USERNAME}" e la tua password "{PASSWORD}".
+Your login details at {FORUMNAME} have been changed and your password reset. Below are your new login details.
 
-Puoi modificarli dopo aver effettuato l\'accesso, semplicemente recandoti nella tua pagina del profilo, o visitando questa pagina dopo l\'accesso:
+Your username is "{USERNAME}" and your password is "{PASSWORD}".
+
+You may change it after you login by going to the profile page, or by visiting this page after you login:
 {SCRIPTURL}?action=profile
 
-{REGARDS}',
-	),
-	'register_activate' => array(
-		/*
-			@additional_params: register_activate
-				REALNAME: The display name for the member receiving the email.
-				USERNAME: The user name for the member receiving the email.
-				PASSWORD: The password for the member.
-				ACTIVATIONLINK:  The url link to reactivate the member's account.
-				ACTIVATIONLINKWITHOUTCODE: The url to the page where the activation code can be entered.
-				ACTIVATIONCODE:  The code needed to reactivate the member's account.
-				FORGOTPASSWORDLINK: The url to the "forgot password" page.
-			@description:
-		*/
-		'subject' => 'Benvenuto in {FORUMNAME}',
-		'body' => 'Grazie per esserti registrato su {FORUMNAME}. Il tuo username è {USERNAME}. Se dimentichi la tua password, puoi resettarla visitando {FORGOTPASSWORDLINK}.
+{REGARDS}';
 
-Prima di poter effettuare il login, devi attivare il tuo account. Per farlo, segui questo link:
+$txt['register_activate_subject'] = 'Welcome to {FORUMNAME}';
+$txt['register_activate_body'] = 'Thank you for registering at {FORUMNAME}. Your username is {USERNAME}. If you forget your password, you can reset it by visiting {FORGOTPASSWORDLINK}.
+
+Before you can login, you first need to activate your account. To do so, please follow this link:
 
 {ACTIVATIONLINK}
 
-Se riscontri problemi nell\'attivazione, visita {ACTIVATIONLINKWITHOUTCODE} ed immetti il codice "{ACTIVATIONCODE}".
+Should you have any problems with activation, please visit {ACTIVATIONLINKWITHOUTCODE} use the code "{ACTIVATIONCODE}".
 
-{REGARDS}',
-	),
-	'register_openid_activate' => array(
-		/*
-			@additional_params: register_activate
-				REALNAME: The display name for the member receiving the email.
-				USERNAME: The user name for the member receiving the email.
-				OPENID: The openID identity for the member.
-				ACTIVATIONLINK:  The url link to reactivate the member's account.
-				ACTIVATIONLINKWITHOUTCODE: The url to the page where the activation code can be entered.
-				ACTIVATIONCODE:  The code needed to reactivate the member's account.
-			@description:
-		*/
-		'subject' => 'Benvenuto in {FORUMNAME}',
-		'body' => 'Grazie per esserti registrato su {FORUMNAME}. Il tuo username è {USERNAME}. Hai scelto di autenticarti usando il seguente OpenID:
+{REGARDS}';
+
+$txt['register_openid_activate_subject'] = 'Welcome to {FORUMNAME}';
+$txt['register_openid_activate_body'] = 'Thank you for registering at {FORUMNAME}. Your username is {USERNAME}. You have chosen to authenticate using the following OpenID identity:
 {OPENID}
 
-Prima di poter effettuare il login, devi attivare il tuo account. Per farlo, segui questo link:
+Before you can login, you first need to activate your account. To do so, please follow this link:
 
 {ACTIVATIONLINK}
 
-Se riscontri problemi nell\'attivazione, visita {ACTIVATIONLINKWITHOUTCODE} ed immetti il codice "{ACTIVATIONCODE}".
+Should you have any problems with activation, please visit {ACTIVATIONLINKWITHOUTCODE} and use the code "{ACTIVATIONCODE}".
 
-{REGARDS}',
-	),
-	'register_coppa' => array(
-		/*
-			@additional_params: register_coppa
-				REALNAME: The display name for the member receiving the email.
-				USERNAME: The user name for the member receiving the email.
-				PASSWORD: The password for the member.
-				COPPALINK:  The url link to the coppa form.
-				FORGOTPASSWORDLINK: The url to the "forgot password" page.
-			@description:
-		*/
-		'subject' => 'Benvenuto in {FORUMNAME}',
-		'body' => 'Grazie per esserti registrato su {FORUMNAME}. Il tuo username è {USERNAME}. Se dimentichi la tua password, puoi resettarla visitando {FORGOTPASSWORDLINK}.
+{REGARDS}';
 
-Prima di poter effettuare il login, l\'amministratore richiede il consenso dai tuoi genitori/tutori per entrare nella community. Puoi avere maggiori informazioni seguendo questo link:
+$txt['register_coppa_subject'] = 'Welcome to {FORUMNAME}';
+$txt['register_coppa_body'] = 'Thank you for registering at {FORUMNAME}. Your username is {USERNAME}. If you forget your password, you can change it at {FORGOTPASSWORDLINK}
+
+Before you can login, the admin requires consent from your parent/guardian for you to join the community. You can obtain more information at the link below:
 
 {COPPALINK}
 
-{REGARDS}',
-	),
-	'register_openid_coppa' => array(
-		/*
-			@additional_params: register_coppa
-				REALNAME: The display name for the member receiving the email.
-				USERNAME: The user name for the member receiving the email.
-				OPENID: The openID identity for the member.
-				COPPALINK:  The url link to the coppa form.
-			@description:
-		*/
-		'subject' => 'Benvenuto in {FORUMNAME}',
-		'body' => 'Grazie per esserti registrato su {FORUMNAME}. Il tuo username è {USERNAME}.
+{REGARDS}';
 
-Hai scelto di autenticarti usando il seguente OpenID:
+$txt['register_openid_coppa_subject'] = 'Welcome to {FORUMNAME}';
+$txt['register_openid_coppa_body'] = 'Thank you for registering at {FORUMNAME}. Your username is {USERNAME}.
+
+You have chosen to authenticate using the following OpenID identity:
 {OPENID}
 
-Prima di poter effettuare il login, l\'amministratore richiede il consenso dai tuoi genitori/tutori per entrare nella community. Puoi avere maggiori informazioni seguendo questo link:
+Before you can login, the admin requires consent from your parent/guardian for you to join the community. You can obtain more information at the link below:
 
 {COPPALINK}
 
-{REGARDS}',
-	),
-	'register_immediate' => array(
-		/*
-			@additional_params: register_immediate
-				REALNAME: The display name for the member receiving the email.
-				USERNAME: The user name for the member receiving the email.
-				PASSWORD: The password for the member.
-				FORGOTPASSWORDLINK: The url to the "forgot password" page.
-			@description:
-		*/
-		'subject' => 'Benvenuto in {FORUMNAME}',
-		'body' => 'Grazie per esserti registrato su {FORUMNAME}. Il tuo username è {USERNAME}. Se dimentichi la tua password, puoi resettarla visitando {FORGOTPASSWORDLINK}.
+{REGARDS}';
 
-{REGARDS}',
-	),
-	'register_openid_immediate' => array(
-		/*
-			@additional_params: register_immediate
-				REALNAME: The display name for the member receiving the email.
-				USERNAME: The user name for the member receiving the email.
-				OPENID: The openID identity for the member.
-			@description:
-		*/
-		'subject' => 'Benvenuto in {FORUMNAME}',
-		'body' => 'Grazie per esserti registrato su {FORUMNAME}. Il tuo username è {USERNAME}.
+$txt['register_immediate_subject'] = 'Welcome to {FORUMNAME}';
+$txt['register_immediate_body'] = 'Thank you for registering at {FORUMNAME}. Your username is {USERNAME}. If you forget your password, you may change it at {FORGOTPASSWORDLINK}.
 
-Hai scelto di autenticarti usando il seguente OpenID:
+{REGARDS}';
+
+$txt['register_openid_immediate_subject'] = 'Welcome to {FORUMNAME}';
+$txt['register_openid_immediate_body'] = 'Thank you for registering at {FORUMNAME}. Your username is {USERNAME}.
+
+You have chosen to authenticate using the following OpenID identity:
 {OPENID}
 
-Potrai aggiornare il tuo profilo visitandoquesta pagina dopo aver effettuato il login:
+You may update your profile by visiting this page after you login:
 
 {SCRIPTURL}?action=profile
 
-{REGARDS}',
-	),
-	'register_pending' => array(
-		/*
-			@additional_params: register_pending
-				REALNAME: The display name for the member receiving the email.
-				USERNAME: The user name for the member receiving the email.
-				PASSWORD: The password for the member.
-				FORGOTPASSWORDLINK: The url to the "forgot password" page.
-			@description:
-		*/
-		'subject' => 'Benvenuto in {FORUMNAME}',
-		'body' => 'La tua richiesta di registrazione in {FORUMNAME} è stata ricevuta, {REALNAME}.
+{REGARDS}';
 
-Il nome utente inserito è {USERNAME} e la password {PASSWORD}.
+$txt['register_pending_subject'] = 'Welcome to {FORUMNAME}';
+$txt['register_pending_body'] = 'Your registration request at {FORUMNAME} has been received, {REALNAME}.
 
-Prima di poter effettuare l\'accesso ed utilizzare il forum, la tua richiesta dovrà essere visionata ed approvata da un membro dello staff. Successivamente riceverai un\'altra email da questo indirizzo.
+The username you registered with was {USERNAME}. If you forget your password, you can change it at {FORGOTPASSWORDLINK}.
 
-{REGARDS}',
-	),
-	'register_openid_pending' => array(
-		/*
-			@additional_params: register_pending
-				REALNAME: The display name for the member receiving the email.
-				USERNAME: The user name for the member receiving the email.
-				OPENID: The openID identity for the member.
-			@description:
-		*/
-		'subject' => 'Benvenuto in {FORUMNAME}',
-		'body' => 'La tua richiesta di registrazione a {FORUMNAME} è stata ricevuta, {REALNAME}.
+Before you can login and start using the forum, your request will be reviewed and approved.  When this happens, you will receive another email from this address.
 
-Lo username con cui ti sei registrato è {USERNAME}.
+{REGARDS}';
 
-Hai scelto di autenticarti usando il seguente OpenID:
+$txt['register_openid_pending_subject'] = 'Welcome to {FORUMNAME}';
+$txt['register_openid_pending_body'] = 'Your registration request at {FORUMNAME} has been received, {REALNAME}.
+
+The username you registered with was {USERNAME}.
+
+You have chosen to authenticate using the following OpenID identity:
 {OPENID}
 
-Prima di poter effettuare il login ed iniziare ad usare il forum, la tua richiesta deve essere revisionata e. Quando questo avverrà, riceverai un\'altra email da questo indirizzo.
+Before you can login and start using the forum, your request will be reviewed and approved.  When this happens, you will receive another email from this address.
 
-{REGARDS}',
-	),
-	'notification_reply' => array(
-		/*
-			@additional_params: notification_reply
-				TOPICSUBJECT:
-				POSTERNAME:
-				TOPICLINK:
-				UNSUBSCRIBELINK:
-			@description:
-		*/
-		'subject' => 'Risposta al topic: {TOPICSUBJECT}',
-		'body' => 'Una risposta è stata inserita da {POSTERNAME} nel topic che stai seguendo.
+{REGARDS}';
 
-Visualizza la risposta: {TOPICLINK}
+$txt['notification_reply_subject'] = 'Topic reply: {TOPICSUBJECT}';
+$txt['notification_reply_body'] = 'A reply has been posted to a topic you are watching by {POSTERNAME}.
 
-Puoi disattivare le notifiche per questo topic cliccando sul seguente collegamento: {UNSUBSCRIBELINK}
+View the reply at: {TOPICLINK}
 
-{REGARDS}',
-	),
-	'notification_reply_body' => array(
-		/*
-			@additional_params: notification_reply_body
-				TOPICSUBJECT:
-				POSTERNAME:
-				TOPICLINK:
-				UNSUBSCRIBELINK:
-				MESSAGE: 
-			@description:
-		*/
-		'subject' => 'Risposta al topic: {TOPICSUBJECT}',
-		'body' => 'Una risposta è stata inserita da {POSTERNAME} nel topic che stai seguendo.
+Unsubscribe to this topic by using this link: {UNSUBSCRIBELINK}
 
-Visualizza la risposta: {TOPICLINK}
+{REGARDS}';
 
-Puoi disattivare le notifiche per questo topic cliccando sul seguente collegamento: {UNSUBSCRIBELINK}
+$txt['notification_reply_body_subject'] = 'Topic reply: {TOPICSUBJECT}';
+$txt['notification_reply_body_body'] = 'A reply has been posted to a topic you are watching by {POSTERNAME}.
 
-Il testo del messaggio è riportato qui sotto:
+View the reply at: {TOPICLINK}
+
+Unsubscribe to this topic by using this link: {UNSUBSCRIBELINK}
+
+The text of the reply is shown below:
 {MESSAGE}
 
-{REGARDS}',
-	),
-	'notification_reply_once' => array(
-		/*
-			@additional_params: notification_reply_once
-				TOPICSUBJECT:
-				POSTERNAME:
-				TOPICLINK:
-				UNSUBSCRIBELINK:
-			@description:
-		*/
-		'subject' => 'Risposta al topic: {TOPICSUBJECT}',
-		'body' => 'Una risposta è stata inserita da {POSTERNAME} nel topic che stai seguendo.
+{REGARDS}';
 
-Visualizza la risposta: {TOPICLINK}
+$txt['notification_reply_once_subject'] = 'Topic reply: {TOPICSUBJECT}';
+$txt['notification_reply_once_body'] = 'A reply has been posted to a topic you are watching by {POSTERNAME}.
 
-Puoi disattivare le notifiche per questo topic cliccando sul seguente collegamento: {UNSUBSCRIBELINK}
+View the reply at: {TOPICLINK}
 
-Altri messaggi potrebbero essere inseriti, ma non riceverai ulteriori notifiche finché non leggerai il topic.
+Unsubscribe to this topic by using this link: {UNSUBSCRIBELINK}
 
-{REGARDS}',
-	),
-	'notification_reply_body_once' => array(
-		/*
-			@additional_params: notification_reply_body_once
-				TOPICSUBJECT:
-				POSTERNAME:
-				TOPICLINK:
-				UNSUBSCRIBELINK:
-				MESSAGE: 
-			@description:
-		*/
-		'subject' => 'Risposta al topic: {TOPICSUBJECT}',
-		'body' => 'Una risposta è stata inserita da {POSTERNAME} nel topic che stai seguendo.
+More replies may be posted, but you won\'t receive any more notifications until you read the topic.
 
-Visualizza la risposta: {TOPICLINK}
+{REGARDS}';
 
-Puoi disattivare le notifiche per questo topic cliccando sul seguente collegamento: {UNSUBSCRIBELINK}
+$txt['notification_reply_body_once_subject'] = 'Topic reply: {TOPICSUBJECT}';
+$txt['notification_reply_body_once_body'] = 'A reply has been posted to a topic you are watching by {POSTERNAME}.
 
-Il testo del messaggio è riportato qui sotto:
+View the reply at: {TOPICLINK}
+
+Unsubscribe to this topic by using this link: {UNSUBSCRIBELINK}
+
+The text of the reply is shown below:
 {MESSAGE}
 
-Altri messaggi potrebbero essere inseriti, ma non riceverai ulteriori notifiche finché non leggerai il topic.
+More replies may be posted, but you won\'t receive any more notifications until you read the topic.
 
-{REGARDS}',
-	),
-	'notification_sticky' => array(
-		/*
-			@additional_params: notification_sticky
-			@description:
-		*/
-		'subject' => 'Topic in evidenza: {TOPICSUBJECT}',
-		'body' => 'Un topic che stai seguendo è stato impostato come in evidenza da {POSTERNAME}.
+{REGARDS}';
 
-Visualizza il topic: {TOPICLINK}
+$txt['notification_sticky_subject'] = 'Topic stickied: {TOPICSUBJECT}';
+$txt['notification_sticky_body'] = 'A topic you are watching has been marked as a sticky topic by {POSTERNAME}.
 
-Puoi disattivare le notifiche per questo topic cliccando sul seguente collegamento: {UNSUBSCRIBELINK}
+View the topic at: {TOPICLINK}
 
-{REGARDS}',
-	),
-	'notification_lock' => array(
-		/*
-			@additional_params: notification_lock
-			@description:
-		*/
-		'subject' => 'Topic chiuso: {TOPICSUBJECT}',
-		'body' => 'Un topic che stai seguendo è stato chiuso da {POSTERNAME}.
+Unsubscribe to this topic by using this link: {UNSUBSCRIBELINK}
 
-Visualizza il topic: {TOPICLINK}
+{REGARDS}';
 
-Puoi disattivare le notifiche per questo topic cliccando sul seguente collegamento: {UNSUBSCRIBELINK}
+$txt['notification_lock_subject'] = 'Topic locked: {TOPICSUBJECT}';
+$txt['notification_lock_body'] = 'A topic you are watching has been locked by {POSTERNAME}.
 
-{REGARDS}',
-	),
-	'notification_unlock' => array(
-		/*
-			@additional_params: notification_unlock
-			@description:
-		*/
-		'subject' => 'Topic riaperto: {TOPICSUBJECT}',
-		'body' => 'Un topic che stai seguendo è stato riaperto da {POSTERNAME}.
+View the topic at: {TOPICLINK}
 
-Visualizza il topic: {TOPICLINK}
+Unsubscribe to this topic by using this link: {UNSUBSCRIBELINK}
 
-Puoi disattivare le notifiche per questo topic cliccando sul seguente collegamento: {UNSUBSCRIBELINK}
+{REGARDS}';
 
-{REGARDS}',
-	),
-	'notification_remove' => array(
-		/*
-			@additional_params: notification_remove
-			@description:
-		*/
-		'subject' => 'Topic eliminato: {TOPICSUBJECT}',
-		'body' => 'Un topic che stavi seguendo è stato eliminato da {POSTERNAME}.
+$txt['notification_unlock_subject'] = 'Topic unlocked: {TOPICSUBJECT}';
+$txt['notification_unlock_body'] = 'A topic you are watching has been unlocked by {POSTERNAME}.
 
-{REGARDS}',
-	),
-	'notification_move' => array(
-		/*
-			@additional_params: notification_move
-			@description:
-		*/
-		'subject' => 'Topic spostato: {TOPICSUBJECT}',
-		'body' => 'Un topic che stai seguendo è stato spostato in un\'altra sezione da {POSTERNAME}.
+View the topic at: {TOPICLINK}
 
-Visualizza il topic: {TOPICLINK}
+Unsubscribe to this topic by using this link: {UNSUBSCRIBELINK}
 
-Puoi disattivare le notifiche per questo topic cliccando sul seguente collegamento: {UNSUBSCRIBELINK}
+{REGARDS}';
 
-{REGARDS}',
-	),
-	'notification_merge' => array(
-		/*
-			@additional_params: notification_merged
-			@description:
-		*/
-		'subject' => 'Topic unito: {TOPICSUBJECT}',
-		'body' => 'Un topic che stai seguendo è stato unito ad un altro da {POSTERNAME}.
+$txt['notification_remove_subject'] = 'Topic removed: {TOPICSUBJECT}';
+$txt['notification_remove_body'] = 'A topic you are watching has been removed by {POSTERNAME}.
 
-Visualizza il nuovo topic: {TOPICLINK}
+{REGARDS}';
 
-Puoi disattivare le notifiche per questo topic cliccando sul seguente collegamento: {UNSUBSCRIBELINK}
+$txt['notification_move_subject'] = 'Topic moved: {TOPICSUBJECT}';
+$txt['notification_move_body'] = 'A topic you are watching has been moved to another board by {POSTERNAME}.
 
-{REGARDS}',
-	),
-	'notification_split' => array(
-		/*
-			@additional_params: notification_split
-			@description:
-		*/
-		'subject' => 'Topic diviso: {TOPICSUBJECT}',
-		'body' => 'Un topic che stai seguendo è stato diviso in due o più topic da {POSTERNAME}.
+View the topic at: {TOPICLINK}
 
-Visualizza il topic: {TOPICLINK}
+Unsubscribe to this topic by using this link: {UNSUBSCRIBELINK}
 
-Puoi disattivare le notifiche per questo topic cliccando sul seguente collegamento: {UNSUBSCRIBELINK}
+{REGARDS}';
 
-{REGARDS}',
-	),
-	'admin_notify' => array(
-		/*
-			@additional_params: admin_notify
-				USERNAME: 
-				PROFILELINK: 
-			@description:
-		*/
-		'subject' => 'Un nuovo utente si è iscritto',
-		'body' => '{USERNAME} ha appena effettuato la registrazione nel tuo forum. Clicca sul collegamento seguente per visualizzare il suo profilo.
+$txt['notification_merge_subject'] = 'Topic merged: {TOPICSUBJECT}';
+$txt['notification_merge_body'] = 'A topic you are watching has been merged with another topic by {POSTERNAME}.
+
+View the new merged topic at: {TOPICLINK}
+
+Unsubscribe to this topic by using this link: {UNSUBSCRIBELINK}
+
+{REGARDS}';
+
+$txt['notification_split_subject'] = 'Topic split: {TOPICSUBJECT}';
+$txt['notification_split_body'] = 'A topic you are watching has been split into two or more topics by {POSTERNAME}.
+
+View what remains of this topic at: {TOPICLINK}
+
+Unsubscribe to this topic by using this link: {UNSUBSCRIBELINK}
+
+{REGARDS}';
+
+$txt['admin_notify_subject'] = 'A new member has joined';
+$txt['admin_notify_body'] = '{USERNAME} has just signed up as a new member of your forum. Click the link below to view their profile.
 {PROFILELINK}
 
-{REGARDS}',
-	),
-	'admin_notify_approval' => array(
-		/*
-			@additional_params: admin_notify_approval
-				USERNAME: 
-				PROFILELINK: 
-				APPROVALLINK: 
-			@description:
-		*/
-		'subject' => 'Un nuovo utente si è iscritto',
-		'body' => '{USERNAME} ha appena effettuato la registrazione nel tuo forum. Clicca sul collegamento seguente per visualizzare il suo profilo.
+{REGARDS}';
+
+$txt['admin_notify_approval_subject'] = 'A new member has joined';
+$txt['admin_notify_approval_body'] = '{USERNAME} has just signed up as a new member of your forum. Click the link below to view their profile.
 {PROFILELINK}
 
-Prima che l\'utente possa inserire post deve avere l\'account approvato. Clicca sul collegamento seguente per visualizzare la pagina di approvazione.
+Before this member can begin posting they must first have their account approved. Click the link below to go to the approval screen.
 {APPROVALLINK}
 
-{REGARDS}',
-	),
-	'admin_attachments_full' => array(
-		/*
-			@additional_params: admin_attachments_full
-				REALNAME:
-			@description:
-		*/
-		'subject' => 'Urgente! La cartella degli allegati è quasi piena',
-		'body' => '{REALNAME},
+{REGARDS}';
 
-La cartella degli allegati su {FORUMNAME} è quasi piena. Per piacere vista il forum per risolvere il problema.
+$txt['admin_attachments_full_subject'] = 'Urgent! Attachments directory almost full';
+$txt['admin_attachments_full_body'] = '{REALNAME},
 
-Quando la cartella degli allegati raggiunge la dimensione massima consentita gli utenti non potranno continuare a postare allegati o caricare avatars personali (se abilitati).
+The attachments directory at {FORUMNAME} is almost full. Please visit the forum to resolve this problem.
 
-{REGARDS}',
-	),
-	'paid_subscription_refund' => array(
-		/*
-			@additional_params: paid_subscription_refund
-				NAME: Subscription title.
-				REALNAME: Recipients name
-				REFUNDUSER: Username who took out the subscription.
-				REFUNDNAME: User's display name who took out the subscription.
-				DATE: Today's date.
-				PROFILELINK: Link to members profile.
-			@description:
-		*/
-		'subject' => 'Rimborso Sottoscrizione Pagata',
-		'body' => '{REALNAME},
+Once the attachments directory reaches it\'s maximum permitted size users will not be able to continue to post attachments or upload custom avatars (If enabled).
 
-Un membro ha ricevuto il rimborso per una sottoscrizione pagata. Di seguito i dettagli della sottoscrizione:
+{REGARDS}';
 
-	Sottoscrizione: {NAME}
-	Nome Utente: {REFUNDNAME} ({REFUNDUSER})
-	Data: {DATE}
+$txt['paid_subscription_refund_subject'] = 'Refunded Paid Subscription';
+$txt['paid_subscription_refund_body'] = '{REALNAME},
 
-Puoi vedere il profilo di questo membro clickando sul link seguente:
+A member has received a refund on a paid subscription. Below are the details of this subscription:
+
+	Subscription: {NAME}
+	User Name: {REFUNDNAME} ({REFUNDUSER})
+	Date: {DATE}
+
+You can view this members profile by clicking the link below:
 {PROFILELINK}
 
-{REGARDS}',
-	),
-	'paid_subscription_new' => array(
-		/*
-			@additional_params: paid_subscription_new
-				NAME: Subscription title.
-				REALNAME: Recipients name
-				SUBEMAIL: Email address of the user who took out the subscription
-				SUBUSER: Username who took out the subscription.
-				SUBNAME: User's display name who took out the subscription.
-				DATE: Today's date.
-				PROFILELINK: Link to members profile.
-			@description:
-		*/
-		'subject' => 'Nuova Sottoscrizione Pagata',
-		'body' => '{REALNAME},
+{REGARDS}';
 
-Un membro si è abbonato ad una nuova sottoscrizione pagata. Di seguito i dettagli della sottoscrizione:
+$txt['paid_subscription_new_subject'] = 'New Paid Subscription';
+$txt['paid_subscription_new_body'] = '{REALNAME},
 
-	Sottoscrizione: {NAME}
-	Nome Utente: {SUBNAME} ({SUBUSER})
-	Email Utente: {SUBEMAIL}
-	Prezzo: {PRICE}
-	Data: {DATE}
+A member has taken out a new paid subscription. Below are the details of this subscription:
 
-Puoi vedere il profilo di questo membro clickando sul link seguente:
+	Subscription: {NAME}
+	User Name: {SUBNAME} ({SUBUSER})
+	User Email: {SUBEMAIL}
+	Price: {PRICE}
+	Date: {DATE}
+
+You can view this members profile by clicking the link below:
 {PROFILELINK}
 
-{REGARDS}',
-	),
-	'paid_subscription_error' => array(
-		/*
-			@additional_params: paid_subscription_error
-				ERROR: Error message.
-				REALNAME: Recipients name
-			@description:
-		*/
-		'subject' => 'È accaduto un Errore su una Sottoscrizione Pagata',
-		'body' => '{REALNAME},
+{REGARDS}';
 
-È accaduto il seguente errore elaborando una sottoscrizione pagata
+$txt['paid_subscription_error_subject'] = 'Paid Subscription Error Occurred';
+$txt['paid_subscription_error_body'] = 'Dear, {REALNAME},
+
+The following error occurred when processing a paid subscription
 ---------------------------------------------------------------
 {ERROR}
 
-{REGARDS}',
-	),
-);
+{REGARDS}';
 
-/*
-	@additional_params: happy_birthday
-		REALNAME: The real (display) name of the person receiving the birthday message.
-	@description: A message sent to members on their birthday.
-*/
-$birthdayEmails = array(
-	'happy_birthday' => array(
-		'subject' => 'Buon compleanno da {FORUMNAME}.',
-		'body' => '{REALNAME},
+$txt['new_pm_subject'] = 'New Personal Message: {SUBJECT}';
+$txt['new_pm_body'] = 'You have just been sent a personal message by {SENDER} on {FORUMNAME}
 
-Noi di {FORUMNAME} vorremmo augurarti un buon compleanno. Possano essere questo giorno e l\'anno a venire colmi di gioia.
+IMPORTANT: Remember, this is just a notification. Please do not reply to this email.
 
-{REGARDS}',
-		'author' => '<a href="http://www.simplemachines.org/community/?action=profile;u=2676">Thantos</a>',
-	),
-	'karlbenson1' => array(
-		'subject' => 'Per il tuo compleanno...',
-		'body' => 'Avremmo potuto mandarti una cartolina. Avremmo potuto mandarti alcuni fiori o una torta.
+Read this Personal Message here: {READLINK}
 
-Ma non lo abbiamo fatto.
+Reply to this Personal Message here: {REPLYLINK}';
 
-Avremmo potuto mandarti uno di quei messaggi generati automaticamente per augurarti un buon compleanno senza dover nemmeno modificre la stringa INSERT_NAME.
+$txt['new_pm_body_subject'] = 'New Personal Message: {SUBJECT}';
+$txt['new_pm_body_body'] = 'You have just been sent a personal message by {SENDER} on {FORUMNAME}
 
-Ma non lo abbiamo fatto.
+IMPORTANT: Remember, this is just a notification. Please do not reply to this email.
 
-Abbiamo scritto questo messaggio di auguri proprio per te.
+The message they sent you was:
 
-Ti auguriamo un compleanno veramente speciale.
+{MESSAGE}
+
+Reply to this Personal Message here: {REPLYLINK}';
+
+$txt['new_pm_tolist_subject'] = 'New Personal Message: {SUBJECT}';
+$txt['new_pm_tolist_body'] = 'You and {TOLIST} have just been sent a personal message by {SENDER} on {FORUMNAME}
+
+IMPORTANT: Remember, this is just a notification. Please do not reply to this email.
+
+Read this Personal Message here: {READLINK}
+
+Reply to this Personal Message (to the sender only) here: {REPLYLINK}';
+
+$txt['new_pm_body_tolist_subject'] = 'New Personal Message: {SUBJECT}';
+$txt['new_pm_body_tolist_body'] = 'You and {TOLIST} have just been sent a personal message by {SENDER} on {FORUMNAME}
+
+IMPORTANT: Remember, this is just a notification. Please do not reply to this email.
+
+The message they sent you was:
+
+{MESSAGE}
+
+Reply to this Personal Message (to the sender only) here: {REPLYLINK}';
+
+$txtBirthdayEmails['happy_birthday_subject'] = 'Happy birthday from {FORUMNAME}.';
+$txtBirthdayEmails['happy_birthday_body'] = 'Dear {REALNAME},
+
+We here at {FORUMNAME} would like to wish you a happy birthday.  May this day and the year to follow be full of joy.
+
+{REGARDS}';
+$txtBirthdayEmails['happy_birthday_author'] = '<a href="http://www.simplemachines.org/community/?action=profile;u=2676">Thantos</a>';
+
+$txtBirthdayEmails['karlbenson1_subject'] = 'On your Birthday...';
+$txtBirthdayEmails['karlbenson1_body'] = 'We could have sent you a birthday card.  We could have sent you some flowers or a cake.
+
+But we didn\'t.
+
+We could have even sent you one of those automatically generated messages to wish you happy birthday where we don\'t even have to replace INSERT NAME.
+
+But we didn\'t
+
+We wrote this birthday greeting just for you.
+
+We would like to wish you a very special birthday.
 
 {REGARDS}
 
-//:: Questo messaggio è stato generato automaticamente :://',
-		'author' => '<a href="http://www.simplemachines.org/community/?action=profile;u=63186">karlbenson</a>',
-	),
-	'nite0859' => array(
-		'subject' => 'Buon Compleanno!',
-		'body' => 'I tuoi amici di {FORUMNAME} vorrebbero augurarti un buon compleanno, {REALNAME}. Se non lo hai fatto di recente, visita la nostra community per dare agli utenti la possibilità di offrirti i loro sinceri auguri.
+//:: This message was automatically generated :://';
+$txtBirthdayEmails['karlbenson1_author'] = '<a href="http://www.simplemachines.org/community/?action=profile;u=63186">karlbenson</a>';
 
-Anche se oggi è il tuo compleanno, {REALNAME}, vorremmo ricordarti che la tua iscrizione alla nostra community è stato il tuo più grande regalo per noi.
+$txtBirthdayEmails['nite0859_subject'] = 'Happy Birthday!';
+$txtBirthdayEmails['nite0859_body'] = 'Your friends at {FORUMNAME} would like to take a moment of your time to wish you a happy birthday, {REALNAME}. If you have not done so recently, please visit our community in order for others to have the opportunity to pass along their warm regards.
 
-I migliori saluti,
-Lo Staff di {FORUMNAME}',
-		'author' => '<a href="http://www.simplemachines.org/community/?action=profile;u=46625">nite0859</a>',
-	),
-	'zwaldowski' => array(
-		'subject' => 'Sinceri auguri, {REALNAME}',
-		'body' => 'Caro {REALNAME},
+Even though today is your birthday, {REALNAME}, we would like to remind you that your membership in our community has been the best gift to us thus far.
 
-Un altro anno della tua vita è passato. Noi di {FORUMNAME} speriamo sia stato pieno di gioia, e ti auguriamo lo stesso per quello a venire.
+Best Wishes,
+The Staff of {FORUMNAME}';
+$txtBirthdayEmails['nite0859_author'] = '<a href="http://www.simplemachines.org/community/?action=profile;u=46625">nite0859</a>';
 
-{REGARDS}',
-		'author' => '<a href="http://www.simplemachines.org/community/?action=profile;u=72038">zwaldowski</a>',
-	),
-	'geezmo' => array(
-		'subject' => 'Buon compleanno, {REALNAME}!',
-		'body' => 'Sai chi compie gli anni oggi, {REALNAME}?
+$txtBirthdayEmails['zwaldowski_subject'] = 'Birthday Wishes to {REALNAME}';
+$txtBirthdayEmails['zwaldowski_body'] = 'Dear {REALNAME},
 
-Noi sì... TU!
+Another year in your life has passed.  We at {FORUMNAME} hope it has been filled with happiness, and wish you luck in the coming one.
 
-Buon compleanno!
+{REGARDS}';
+$txtBirthdayEmails['zwaldowski_author'] = '<a href="http://www.simplemachines.org/community/?action=profile;u=72038">zwaldowski</a>';
 
-Ora sei più vecchio di un anno ma speriamo che tu sia molto più felice dell\'anno scorso.
+$txtBirthdayEmails['geezmo_subject'] = 'Happy birthday, {REALNAME}!';
+$txtBirthdayEmails['geezmo_body'] = 'Do you know who\'s having a birthday today, {REALNAME}?
 
-Divertiti oggi, {REALNAME}!
+We know... YOU!
 
-- Dalla tua famiglia di {FORUMNAME}',
-		'author' => '<a href="http://www.simplemachines.org/community/?action=profile;u=48671">geezmo</a>',
-	),
-	'karlbenson2' => array(
-		'subject' => 'Auguri di Buon Compleanno',
-		'body' => 'Ci auguriamo che questo compleanno sia migliore.
-Speriamo tu riceva una buona torta ma soprattutto tanto divertimento, ricordati di raccontarci cosa hai fatto.
+Happy birthday!
 
-Nella speranza che questo messaggio ti abbia fatto sorridere, ci rivediamo il prossimo anno.
+You\'re now a year older but we hope you\'re a lot happier than last year.
 
-{REGARDS}',
-		'author' => '<a href="http://www.simplemachines.org/community/?action=profile;u=63186">karlbenson</a>',
-	),
-);
+Enjoy your day today, {REALNAME}!
+
+- From your {FORUMNAME} family';
+$txtBirthdayEmails['geezmo_author'] = '<a href="http://www.simplemachines.org/community/?action=profile;u=48671">geezmo</a>';
+
+$txtBirthdayEmails['karlbenson2_subject'] = 'Your Birthday Greeting';
+$txtBirthdayEmails['karlbenson2_body'] = 'We hope your birthday is the best ever cloudy, sunny or whatever the weather.
+Have lots of birthday cake and fun, and tell us what you have done.
+
+We hope this message brought you cheer, and make it last, until same time same place, next year.
+
+{REGARDS}';
+$txtBirthdayEmails['karlbenson2_author'] = '<a href="http://www.simplemachines.org/community/?action=profile;u=63186">karlbenson</a>';
 
 ?>

@@ -1,5 +1,5 @@
 <?php
-// Version: 2.0; Help
+// Version: ; Help
 
 global $helptxt;
 
@@ -88,11 +88,6 @@ $helptxt['securitysettings'] = '<strong>Sicurezza e Moderazione</strong><br /> Q
 
 $helptxt['modsettings'] = '<strong>Caratteristiche e opzioni</strong><br />
 	In questa sezione è possibile modificare molte funzionalità del forum; le opzioni di mod (pacchetti di modifica) eventualmente installati dovrebbero essere visualizzate all\'interno di questa sezione.';
-
-$helptxt['number_format'] = '<strong>Formato predefinito dei numeri</strong><br />
-	È possibile utilizzare questa impostazione per modificare il modo in cui i numeri vengono visualizzati sul forum. Il formato di questo parametro è:<br />
-	<div style="margin-left: 2ex;">1,234.00</div><br />
-	Dove \',\' è il carattere usato per suddividere le migliaia, \'.\' è il carattere usato come separatore dei decimali, il numero degli zero indica la precisione degli arrotondamenti.';
 
 $helptxt['time_format'] = '<strong>Formato predefinito della data</strong><br />
 	In questa sezione è possibile impostare il formato dell\'ora e della data: sebbene si possano utilizzare diverse combinazioni di lettere, non è un\'operazione complessa.
@@ -199,6 +194,7 @@ $helptxt['smileys'] = '<strong>Pacchetti di smiley</strong><br />
 	È anche possibile modificare le icone dei messaggi, se sono state abilitate nella pagine delle preferenze.';
 $helptxt['calendar'] = '<strong>Gestione agenda</strong><br />
 	Da qui è possibile modificare le impostazioni correnti dell\'agenda come anche aggiungere ed elimnare le feste che compaiono in essa.';
+$helptxt['cal_export'] = 'Exports a text file in the iCal format for importing in to other calendar applications';
 
 $helptxt['serversettings'] = '<strong>Impostazioni server</strong><br />
 	Qui è possibile effettuare la configurazione di base del forum. Questa sezione include le impostazioni per il database e l\'URL, come pure altre
@@ -249,21 +245,27 @@ $helptxt['disableTemplateEval'] = 'Per default, i template sono valutati invece 
 $helptxt['databaseSession_enable'] = 'Questa opzione abilita l\'uso del database per il salvataggio della sessione - è la scelta ideale per i server con bilanciamento del carico, ma aiuta anche in caso di problemi di timeout e può rendere il forum più veloce. Non funziona se session.auto_start è abilitato.';
 $helptxt['databaseSession_loose'] = 'Abilitando questa opzione si diminuisce il consumo di banda del forum e si fa in modo che, facendo clic su \'Torna indietro una pagina\', la pagina non venga ricaricata - l\'aspetto negativo è che, ad esempio, le icone non si aggiornano (a meno che non si faccia clic su quella pagina invece di tornare indietro).';
 $helptxt['databaseSession_lifetime'] = 'È il numero di secondi di inattività dopo cui le sessioni vengono chiuse. Se non si accede a una sessione per troppo tempo, si dice che la sessione è &quot;scaduta&quot;. Si consiglia di impostare un valore superiore a 2400.';
+$helptxt['cache_enable'] = 'SMF performs caching at a variety of levels. The higher the level of caching enabled the more CPU time will be spent retrieving cached information. If caching is available on your machine it is recommended that you try caching at level 1 first.';
+$helptxt['cache_memcached'] = 'If you are using memcached you need to provide the server details. This should be entered as a comma separated list as shown in the example below:<br /><br/>	&quot;server1,server2,server3:port,server4&quot;<br /><br />Note that if no port is specified SMF will use port 11211. SMF will attempt to perform rough/random load balancing across the specified servers.';
+$helptxt['cache_cachedir'] = 'This setting is only for the smf file based cache system. It specifies the path to the cache directory.  It is recommended that you place this in /tmp/ if you are going to use this, although it will work in any directory';
 $helptxt['enableErrorLogging'] = 'Serve per tenere traccia di tutti gli errori, come ad esempio un accesso fallito, e per individuare eventuali problemi.';
 $helptxt['enableErrorQueryLogging'] = 'Questo includerà la query completa mandata al database in caso di errore. E\' necessario che il registro errori sia abilitato.<br /><br /><strong>N.B: Questa opzione intaccherà la possibilità di filtrare il registro errori in base ai messaggi.</strong>';
 $helptxt['allow_disableAnnounce'] = 'Permette agli utenti di disabilitare la notifica di nuovi topic annunciati spuntando la casella &quot;annuncia topic&quot; quando si invia un messaggio';
 $helptxt['disallow_sendBody'] = 'Questa opzione elimina la possibilità di ricevere il contenuto delle risposte e dei messaggi nelle e-mail di notifica.<br /><br />Spesso, gli utenti rispondono alle e-mail di notifica, cosa che di solito si traduce nella ricezione della risposta da parte del webmaster.';
+$helptxt['jquery_source'] = 'This will determine the source used to load the jQuery Library.  Auto will use the CDN first and if not available fall back to the local source.  Local will only use the local source, CDN will only load it from Googles CDN network';
 $helptxt['compactTopicPagesEnable'] = 'Mostra una selezione del numero delle pagine.<br /><em>Esempio:</em>
 		&quot;3&quot; da visualizzare: 1 ... 4 [5] 6 ... 9 <br />
 		&quot;5&quot; da visualizzare: 1 ... 3 4 [5] 6 7 ... 9';
 $helptxt['timeLoadPageEnable'] = 'Visualizza nella parte inferiore della finestra il tempo in secondi che SMF ha impiegato per generare la pagina.';
 $helptxt['removeNestedQuotes'] = 'Mostra solamente la citazione del messaggio selezionato e non tutte le altre citazioni al suo interno.';
 $helptxt['simpleSearch'] = 'Mostra un modulo di ricerca semplice e un collegamento a un modulo di ricerca più avanzata.';
+$helptxt['search_dropdown'] = 'This will show a search selection dropdown next to the quick search box.  From this you can choose to search the current site, current board (if in a board_, current topic (if in a topic) or search for members.';
 $helptxt['max_image_width'] = 'Permette di impostare una dimensione massima per le immagini inserite. Le immagini inferiori alla dimensione massima non vengono influenzate.';
 $helptxt['mail_type'] = 'Permette di scegliere le impostazioni predefinite di PHP, oppure di superare tali impostazioni con SMTP.  PHP non gestisce l\'autenticazione con SMTP (cosa richiesta da molti host, oggigiorno) quindi se la si desidera bisogna selezionare SMTP.  Si noti che SMTP può essere più lento, e alcuni server non accettano nomi utente e password.<br /><br />Non è necessario riempire le impostazioni SMTP se si usano le impostazioni predefinite PHP.';
 $helptxt['attachment_manager_settings'] = 'Gli allegati sono dei files che gli utenti possono caricare, e allegare ad un post.<br /><br /> <strong>Controlla l\'estensione dell\'allegato</strong>:<br /> Vuoi controllare l\'estensione dei files?<br /> <strong>Estensioni di allegati permesse</strong>:<br /> Puoi settare le estensioni permesse degli allegati.<br /> <strong> Directory degli allegati</strong>:<br /> L\'indirizzo della cartella del tuo allegato<br />(esempio: /home/sites/yoursite/www/forum/allegati)<br /> <strong>Spazio massimo consentito per allegati</strong> (in KB):<br /> Scegli quanto deve essere grande la cartella degli allegati, inclusi tutti i files dentro.<br /> <strong>Massima grandezza dell\' allegato per post</strong> (in KB):<br /> Scegli la grandezza massima raggiungibile per tutti gli allegati nel post. Se questa è piu bassa del limite per-allegato, allora questa sarà il limite.<br /> <strong>Massima grandezza per allegato</strong> (in KB):<br /> Scegli la massima grandezza dei files per ogni allegato.<br /> <strong>Massimo numero di allegati per post</strong>:<br /> Scegli il numero di allegati che una persona puo\' fare, per post.<br /> <strong>MOstra gli allegati come immagini nei post</strong>:<br /> Se il file caricato è un immagine, questa verra\' mostrata sotto il post.<br /> <strong>Ridimensiona immagini quando sono mostrate in fondo ai post</strong>:<br /> Se l\'opzione di sopra è stata selezionata, questo salvera\' un separato(piu piccolo) allegato per migliorare la banda internet.<br /> <strong> Massima larghezza e altezza delle immagini</strong>:<br /> Usato solamente con il &quote;Ridimensiona le immagini quando si trovano sotto il post&quote; opzione, la larghezza e l\'altezza massima per ridimensionare gli allegati partendo da sotto. Saranno ridimensionati proporzionalmente. ';
 $helptxt['attachment_image_paranoid'] = 'Questa opzione attiverà un controllo di sicurezza molto rigido sulle immagini allegate. Attenzione! Questi controlli possono segnalare come pericolose anche immagini che non lo sono. È caldamente consigliato utilizzare questa opzione solo in associazione con la ricodifica delle immagini, in tal modo SMF tenterà di ricreare le immagini che falliscono il controllo di sicurezza: se la ricodifica avviene con successo significa che le immagini sono state rese sicure e possono essere caricate come allegati. Se invece la ricodifica dell\'immagine non è attiva, tutti gli allegati che falliscono il controllo di sicurezza saranno respinti.';
 $helptxt['attachment_image_reencode'] = 'Selezionando questa opzione SMF tenterà di ricodificare le immagini caricate come allegati. La ricodifica delle immagini offre maggiore sicurezza, ma allo stesso tempo rende statiche tutte le immagini animate. <br /> Questa funzione è disponibile solo se il modulo GD è installato sul tuo server.';
+$helptxt['attachment_thumb_memory'] = 'The larger the source image (size & width x height), the higher the memory requirements are for the system to successfully create a thumbnail image.<br />Checking this option, the system will estimate the required memory and will then request that amount.  If successful, only then will it attempt to create the thumbnail.<br />This will result in fewer white screen errors but may result in fewer thumbnails being created.  Leaving this unchecked the system will always try to create the thumbnail (with a fixed amount of memory).  This may result in more white screen errors.';
 $helptxt['avatar_paranoid'] = 'Selezionando questa opzione verranno abilitati controlli di sicurezza molto rigidi sugli avatar. Attenzione! Questi controlli potrebbero respingere anche immagini valide. Si consiglia caldamente di utilizzare questa funzione solo insieme alla ricodifica degli avatar in modo da consentire ad SMF di ricampionare le immagini che falliscono il controllo di sicurezza: se la ricodifica ha successo, l\'immagine sarà resa sicura e caricata. Altrimenti se la ricodifica degli avatar non è abilitata, tutti quelli che non passeranno il controllo di sicurezza verranno rifiutati.';
 $helptxt['avatar_reencode'] = 'Selezionando questa opzione SMF tenterà di ricodificare gli avatar caricati. La ricodifica delle immagini offre maggiore sicurezza, ma allo stesso tempo rende statiche tutte le immagini animate. <br /> Questa funzione è disponibile solo se il modulo GD è installato sul tuo server.';
 $helptxt['karmaMode'] = 'Il Karma è la funzione che misura la popolarità di un utente.
@@ -324,9 +326,12 @@ $helptxt['globalCookies'] = 'Permette l\'uso di cookie di accesso non dipendenti
 	il sito è http://www.simplemachines.org/,<br />
 	e il forum è http://forum.simplemachines.org/,<br />
 	con questa modifica sarà possibile accedere ai cookie del forum dal sito.  Non attivare questa opzione se ci sono altri sottodomini (come hacker.simplemachines.org) di cui non avete il controllo.';
+$helptxt['globalCookiesDomain'] = 'Define the main domain to be used when log in cookies are available across subdomains';
 $helptxt['secureCookies'] = 'Abilitare questa opzione forzerà i cookie creati per i tuoi utenti sul tuo forum, ad essere segnati come sicuri. Attiva questa opzione solo se stai usando HTTPS sul tuo forum, altrimenti creerà problemi nella gestione dei cookie.';
 $helptxt['securityDisable'] = 'Questa opzione <em>disabilita</em> la richiesta aggiuntiva di password per la sezione di amministrazione. Altamente sconsigliata!';
 $helptxt['securityDisable_why'] = 'Questa è la password attuale (la stessa utilizzata per accedere.)<br /><br />L\'obbligo di inserire la password assicura che l\'utente sia pienamente consapevole delle modifiche che sta effettuando e che sia il vero utente a operare.';
+$helptxt['securityDisable_moderate'] = 'This <em>disables</em> the additional password check for the moderation section. This is not recommended!';
+$helptxt['securityDisable_moderate_why'] = 'This is your current password. (the same one you use to login.)<br /><br />Having to type this helps ensure that you want to do whatever moderation you are doing, and that it is <strong>you</strong> doing it.';
 $helptxt['emailmembers'] = 'In questo messaggio è possibile inserire alcune &quot;variabili&quot;. Queste sono:<br />
 	{\\$board_url} - Indirizzo web del forum.<br />
 	{\\$current_time} - Ora attuale.<br />
@@ -342,9 +347,11 @@ $helptxt['attachmentEncryptFilenames'] = 'Cifrare i nomi degli allegati consente
 	più difficile la ricostruzione dell\'archivio in caso di problemi.';
 
 $helptxt['failed_login_threshold'] = 'Imposta il numero di tentativi d\'accesso falliti prima di portare l\'utente alla pagina per il recupero della password.';
+$helptxt['loginHistoryDays'] = 'The number of days to keep login history under user profile tracking. Default is 30 days.';
 $helptxt['oldTopicDays'] = 'Se questa opzione è attiva verrà visualizzato un avviso all\'utente che cerca di rispondere ad un topic non più attivo per un certo tempo, in giorni, specificato da questa impostazione. Impostare a 0 per disabilitare la funzione.';
 $helptxt['edit_wait_time'] = 'Numero di secondi entro cui è possibile modificare un messaggio senza che compaia la data dell\'ultima modifica.';
 $helptxt['edit_disable_time'] = 'Numero di minuti che possono trascorrere prima che un utente non possa più modificare un suo messaggio. Impostare a 0 per disabilitare. <br /><br /><em>Nota: Ciò non influenzerà gli utenti che ahnno il permesso di modificare i messaggi delle altre persone.</em>';
+$helptxt['preview_characters'] = 'This option sets the number of available characters for the first and last message topic preview.  <strong>Note</strong> this only makes the information available to the theme, the theme must support the message_index_preview setting';
 $helptxt['posts_require_captcha'] = 'This setting will force users to enter a code shown on a verification image each time they make a post to the board. Only users with a post count below the number set will need to enter the code - this should help combat automated spamming scripts.';
 $helptxt['enableSpellChecking'] = 'Abilita il controllo ortografico. È necessario avere la libreria pspell installata sul server e la configurazione PHP adatta per usare la libreria pspell. Il  server ' . (function_exists('pspell_new') ? 'HA' : 'NON HA') . ' le impostazioni corrette.';
 $helptxt['disable_wysiwyg'] = 'Questa impostazione impedisce a tutti gli utenti di utilizzare l\'editor WYSIWYG (&quot;What You See Is What You Get&quot;) nella pagina di creazione post.';
@@ -369,8 +376,8 @@ $helptxt['queryless_urls'] = 'Cambia il formato degli URL in modo da migliorare 
 
 Questa funzione ' . (isset($_SERVER['SERVER_SOFTWARE']) && (strpos($_SERVER['SERVER_SOFTWARE'], 'Apache') !== false || strpos($_SERVER['SERVER_SOFTWARE'], 'lighttpd') !== false) ? '' : 'non') . ' è disponibile sul server in uso.';
 $helptxt['countChildPosts'] = 'Spuntando questa opzione i messaggi ed i topic in una sottosezione verranno conteggiati nei totali della pagina principale.<br /><br />Questa impostazione renderà il caricamento visibilmente più lento, ma eviterà che una sezione principale senza post mostri \'0\'.';
-$helptxt['fixLongWords'] = '\'Questa opzione suddivide le parole più lunghe di una certa lunghezza per non compromettere l\'impaginazione del forum. Questa opzione non dovrebbe essere impostata a un valore inferiore a 40. Questa opzione non funziona su forum che utilizzano la codifica UTF-8 o hanno una versione di PHP installata inferiore alla 4.4.0. Il server \' . (empty($GLOBALS[\'context\'][\'utf8\']) || version_compare(PHP_VERSION, \'4.4.0\') != -1 ? \'SUPPORTA\' : \'NON SUPPORTA\') . \' questa funzione\'';
 $helptxt['allow_ignore_boards'] = 'Selezionando questa opzione consentirai agli utenti di selezionare le sezioni che desiderano ignorare.';
+$helptxt['deny_boards_access'] = 'Checking this option will allow you to deny access to certain boards based on membergroup access';
 
 $helptxt['who_enabled'] = 'Questa opzione consente o nega agli utenti la possibilità di vedere chi è collegato e che cosa sta facendo.';
 
@@ -415,6 +422,7 @@ $helptxt['password_strength'] = 'Questa impostazione specifica la robustezza nec
 		<li><strong>Media:</strong> La password deve essere lunga almeno otto caratteri, e non può contenere parte del nome utente o indirizzo e-mail.</li>
 		<li><strong>Alta:</strong> Come per media, eccetto che la password deve anche contenere una mescolanza di maiuscole e minuscole, e almeno un numero.</li>
 	</ul>';
+$helptxt['enable_password_conversion'] = 'By enabling this setting, SMF will attempt to detect passwords stored in other formats and convert them to the format SMF uses.  Typically this is used for forums converted to SMF, but may have other uses as well.  Disabling this prevents a user from logging in using their password after a conversion and would need to reset their password.';
 
 $helptxt['coppaAge'] = 'Il valore specificato in questo campo determinerà l\'età minima che devono avere i nuovi utenti per vedersi garantito un accesso immediato al forum.
 	Durante la registrazione gli verrà richiesto di confermare se superano tale età, e in caso negativo vedranno la loro richiesta rifiutata o sospese in attesa di approvazione da parte dei genitori - dipendentemente dal tipo di restrizione scelta.
@@ -503,6 +511,12 @@ $helptxt['posts_and_topics'] = '
 			Modifica le impostazioni relative ai topic. Il numero di topic per pagina, se i topic importanti sono attive o meno, il numero di messaggi necessari affinché un topic sia caldo, ecc.
 		</li>
 	</ul>';
+
+$helptxt['spider_mode'] = 'Sets the logging level.<br />
+Standard - Logs minimal spider activity.<br />
+Moderate - Provides more accurate statistics.<br />
+Agressive - As for &quot;Moderate&quot; but logs data about each page visited.';
+
 $helptxt['spider_group'] = 'Selezionando un gruppo restrittivo, quando un visitatore viene riconosciuto come un crawler di motori di ricerca automaticamente riceverà gli inferiori permessi possibili. Usa questa opzione per rifiutare l\'accesso ai motori di ricerca.<br />Nota: Il rilevamento degli spider non è accuratissimo, possono essere riconosciuti erroneamente come semplici visitatori e non è dunque garantita alcuna sicurezza in questo senso.';
 $helptxt['show_spider_online'] = 'Questa impostazione permette di selezionare quali spider mostrare nella lista degli utenti connessi. Le opzioni sono: <ul class="normallist">  <li>  <strong>Per niente</strong><br />  Gli spider appariranno come semplici utenti. </li><li>  <strong>Mostra Quantità di Spider</strong><br />  Verrà mostrato semplicemente il numero di spider attivi sul forum. </li><li>  <strong>Mostra i nomi degli Spider</strong><br />  Ogni nome verrà rivelato, gli utenti potranno dunque leggere quali spider sono attivi sul forum. </li><li>  <strong>Mostra i nomi degli Spider - Solo Amministratore</strong><br />  Come sopra, solamente l\'opzione si applica agli amministratori e non agli altri utenti. </li>  </ul>  ';
 

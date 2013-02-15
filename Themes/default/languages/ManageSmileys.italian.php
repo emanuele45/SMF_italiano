@@ -1,11 +1,11 @@
 <?php
-// Version: 2.0; ManageSmileys
+// Version: ; ManageSmileys
 
-// Important! Before editing these language files please read the text at the top of index.english.php.
 $txt['smiley_sets_save'] = 'Salva modifiche';
 $txt['smiley_sets_add'] = 'Nuovo gruppo di smiley';
 $txt['smiley_sets_delete'] = 'Elimina elementi selezionati';
 $txt['smiley_sets_confirm'] = 'Sei certo di voler eliminare questi pacchetti di smiley?\\n\\nNota: questo non eliminerà le immagini, ma solo la loro disponibilità.';
+$txt['smiley_sets_none'] = 'There are currently no smiley sets.';
 
 $txt['setting_smiley_sets_default'] = 'Impostazione default smiley';
 $txt['setting_smiley_sets_enable'] = 'Attiva la selezione dei pacchetti di smiley da parte degli utenti';
@@ -92,6 +92,7 @@ $txt['icons_new_icon'] = 'Nuova icona post';
 $txt['icons_location_first_icon'] = 'Come prima icona';
 $txt['icons_location_after'] = 'Dopo';
 $txt['icons_filename_all_gif'] = 'Tutti i file devono essere file &quot;gif&quot;';
+$txt['icons_filename_all_png'] = 'All files must be &quot;png&quot; files';
 $txt['icons_no_entries'] = 'Al momento non ci sono icone messaggio configurate.';
 
 ?>

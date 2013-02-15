@@ -1,5 +1,5 @@
 <?php
-// Version: 2.0; ManageMembers
+// Version: ; ManageMembers
 
 global $context;
 
@@ -13,6 +13,7 @@ $txt['membergroups_modify'] = 'Modifica';
 $txt['membergroups_add_group'] = 'Aggiungi gruppo';
 $txt['membergroups_regular'] = 'Gruppi normali';
 $txt['membergroups_post'] = 'Gruppi basati sul numero di messaggi';
+$txt['membergroups_guests_na'] = 'n/a';
 
 $txt['membergroups_group_name'] = 'Nome del gruppo';
 $txt['membergroups_new_board'] = 'Sezioni visibili';
@@ -46,9 +47,9 @@ $txt['membergroups_group_type_free'] = 'Libero <span class="smalltext">(Gli uten
 $txt['membergroups_group_type_post'] = 'Numero di post <span class="smalltext">(Appartenenza al gruppo assegnata dopo il raggiungimento di un certo numero di post)</span>';
 $txt['membergroups_min_posts'] = 'Messaggi richiesti';
 $txt['membergroups_online_color'] = 'Colore nella lista degli utenti connessi';
-$txt['membergroups_star_count'] = 'Numero di stelle';
-$txt['membergroups_star_image'] = 'Nome del file stella';
-$txt['membergroups_star_image_note'] = 'puoi utilizzare $language per la lingua dell\'utente';
+$txt['membergroups_icon_count'] = 'Number of icon images';
+$txt['membergroups_icon_image'] = 'Icon image filename';
+$txt['membergroups_icon_image_note'] = 'you can use $language for the language of the user';
 $txt['membergroups_max_messages'] = 'Numero massimo messaggi privati';
 $txt['membergroups_max_messages_note'] = '0 = illimitato';
 $txt['membergroups_edit_save'] = 'Registra';
@@ -77,7 +78,7 @@ $txt['membergroups_images_url'] = '{URL tema}/images/';
 $txt['membergroups_select_visible_boards'] = 'Mostra sezioni';
 $txt['membergroups_members_top'] = 'Utenti';
 $txt['membergroups_name'] = 'Nome';
-$txt['membergroups_stars'] = 'Stelle';
+$txt['membergroups_icons'] = 'Icons';
 
 $txt['admin_browse_approve'] = 'Utenti i cui account attendono approvazione';
 $txt['admin_browse_approve_desc'] = 'Da qui è possibile gestire tutti gli utenti che attendono l\'approvazione del proprio account.';

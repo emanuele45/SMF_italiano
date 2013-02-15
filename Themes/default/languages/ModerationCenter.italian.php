@@ -1,11 +1,11 @@
 <?php
-// Version: 2.0; ModerationCenter
+// Version: ; ModerationCenter
 
 global $scripturl;
 
-// Important! Before editing these language files please read the text at the top of index.english.php.
 $txt['moderation_center'] = 'Centro Moderazione';
 $txt['mc_main'] = 'Principale';
+$txt['mc_logs'] = 'Logs';
 $txt['mc_posts'] = 'Post';
 $txt['mc_groups'] = 'Gruppi';
 
@@ -64,6 +64,7 @@ $txt['mc_groupr_reject_w_reason'] = 'Rifiuta la richiesta con una motivazione';
 $txt['mc_groupr_warning'] = 'Sicuro di voler procedere?';
 
 $txt['mc_unapproved_attachments_none_found'] = 'Non sono stati trovati allegati non approvati!';
+$txt['mc_unapproved_attachments_desc'] = 'From here you can approve or delete any attachments awaiting moderation.';
 $txt['mc_unapproved_replies_none_found'] = 'Non sono presenti post non approvati!';
 $txt['mc_unapproved_topics_none_found'] = 'Non sono presenti topic non approvati!';
 $txt['mc_unapproved_posts_desc'] = 'Da qui puoi approvare o cancellare ogni post in attesa di moderazione.';
@@ -124,9 +125,9 @@ $txt['mc_warning_template_body_desc'] = 'Il contenuto del messaggio di notifica.
 $txt['mc_warning_template_body_default'] = '\'{MEMBER},\' . "\\n\\n" . \'Hai ricevuto un\'ammonizione per condotta inappropriata. Ti invitiamo a seguere le regole del forum, altrimenti prenderemo i dovuti provvedimenti.\' . "\\n\\n" . \'{REGARDS}\'';
 $txt['mc_warning_template_personal'] = 'Modello personale';
 $txt['mc_warning_template_personal_desc'] = 'Se selezioni questa opzione, solamente tu avrai modo di vedere, modificare e utilizzare questo modello. Se non selezionata, tutti i moderatori potranno utilizzare questo modello.';
-$txt['mc_warning_template_error_empty'] = 'Devi indicare sia il titolo che il corpo della notifica.';
+$txt['mc_warning_template_error_no_title'] = 'You must set title.';
+$txt['mc_warning_template_error_no_body'] = 'You must set a notification body.';
 
-$txt['mc_prefs'] = 'Preferenze';
 $txt['mc_settings'] = 'Modifica impostazioni';
 $txt['mc_prefs_title'] = 'Preferenze moderazione';
 $txt['mc_prefs_desc'] = 'Questa sezione ti permette di impostare alcune preferenze personali legate alle attività di moderazione, come ad esempio le notifiche e-mail.';
@@ -138,6 +139,7 @@ $txt['mc_prefs_notify_report_never'] = 'Mai';
 $txt['mc_prefs_notify_report_moderator'] = 'Solo se è una sezione che modero';
 $txt['mc_prefs_notify_report_always'] = 'Sempre';
 $txt['mc_prefs_notify_approval'] = 'Notifica degli elementi in attesa di approvazione';
+$txt['mc_logoff'] = 'Moderator End Session';
 
 // Use entities in the below string.
 $txt['mc_click_add_note'] = 'Aggiungi una nuova nota';

@@ -1,9 +1,12 @@
 <?php
-// Version: 2.0; Who
+// Version: ; Who
 
 global $scripturl, $context;
 
 $txt['who_hidden'] = '<em>Niente, o niente che tu possa vedere...</em>';
+$txt['who_admin'] = 'Viewing the admin portal';
+$txt['who_moderate'] = 'Viewing the moderator portal';
+$txt['who_generic'] = 'Viewing the';
 $txt['who_unknown'] = '<em>Azione sconosciuta</em>';
 $txt['who_user'] = 'Utente';
 $txt['who_time'] = 'Ora';
@@ -132,6 +135,9 @@ $txt['credits_anyone'] = 'E per tutti quelli che abbiamo dimenticato di includer
 $txt['credits_copyright'] = 'Copyright';
 $txt['credits_forum'] = 'Forum';
 $txt['credits_modifications'] = 'Modifiche';
+$txt['credits_software_graphics'] = 'Software/Graphics';
+$txt['credits_software'] = 'Software';
+$txt['credits_graphics'] = 'Graphics';
 $txt['credits_groups_ps'] = 'Supporto al progetto';
 $txt['credits_groups_dev'] = 'Sviluppatori';
 $txt['credits_groups_support'] = 'Specialista del supporto';
@@ -141,6 +147,8 @@ $txt['credits_groups_marketing'] = 'Marketing';
 $txt['credits_groups_internationalizers'] = 'Localizers';
 $txt['credits_groups_servers'] = 'Servers Administrators ';
 $txt['credits_groups_site'] = 'Site Administrators ';
+$txt['credits_license'] = 'License';
+$txt['credits_version'] = 'Versione';
 // Replace "English" with the name of this language pack in the string below.
 $txt['credits_groups_translation'] = 'Italian Translation';
 $txt['credits_groups_translators'] = 'Traduttori';
@@ -152,6 +160,6 @@ $txt['credits_groups_founder'] = 'Padre Fondatore di SMF';
 $txt['credits_groups_orignal_pm'] = 'Responsabili iniziali del progetto';
 
 // List of people who have made more than a token contribution to this translation. (blank for English)
-$txt['translation_credits'] = array ('<a href="http://www.simplemachines.org/community/index.php?action=profile;u=61650">Irish Dragon</a>, <a href="http://www.simplemachines.org/community/index.php?action=profile;u=75472">Lorenzo Raffio</a>, <a href="http://www.simplemachines.org/community/index.php?action=profile;u=29200">Darknico</a>');
+$txt['translation_credits'] = array ('<a href="http://www.simplemachines.org/community/index.php?action=profile;u=61650">Irish Dragon</a>, <a href="http://www.simplemachines.org/community/index.php?action=profile;u=75472">Lorenzo Raffio</a>');
 
 ?>

@@ -1,9 +1,8 @@
 <?php
-// Version: 2.0; PersonalMessage
+// Version: ; PersonalMessage
 
 global $context;
 
-// Important! Before editing these language files please read the text at the top of index.english.php.
 $txt['pm_inbox'] = 'Indice dei messaggi privati';
 $txt['send_message'] = 'Invia messaggio';
 $txt['pm_add'] = 'Aggiungi';
@@ -20,13 +19,6 @@ $txt['delete_message'] = 'Elimina messaggi';
 $txt['delete_all'] = 'Elimina tutti i messaggi nella PMBOX';
 $txt['delete_all_confirm'] = 'Vuoi eliminare tutti i messaggi?';
 $txt['recipient'] = 'Destinatario';
-// Don't translate the word "SUBJECT" here, as it is used to format the message - use numeric entities as well.
-$txt['new_pm_subject'] = 'Nuovo messaggio privato: SUBJECT';
-// Don't translate SENDER or MESSAGE in this language string; they are replaced with the corresponding text - use numeric entities too.
-$txt['pm_email'] = 'Hai appena ricevuto un messaggio privato da SENDER su ' . $context['forum_name'] . '.' . "\n\n" . 'IMPORTANTE: ricorda, questa è solo una notifica. Non rispondere a questa e-mail.' . "\n\n" . 'Il messaggio inviato è:' . "\n\n" . 'MESSAGE';
-$txt['pm_multiple'] = '(destinatari multipli: \'name1, name2\')';
-// Use numeric entities in the below string.
-$txt['instant_reply'] = 'Rispondi a questo messaggio privato qui:';
 
 $txt['delete_selected_confirm'] = 'Vuoi eliminare tutti i messaggi privati selezionati?';
 

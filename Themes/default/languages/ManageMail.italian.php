@@ -1,7 +1,6 @@
 <?php
-// Version: 2.0; ManageMail
+// Version: ; ManageMail
 
-// Important! Before editing these language files please read the text at the top of index.english.php.
 $txt['mailqueue_desc'] = 'Da questa pagina puoi configurare le impostazioni per le e-mail, come visualizzare ed amministrare l\'attuale coda di e-mail se è stata abilitata l\'opzione apposita.';
 
 $txt['mail_type'] = 'Tipo di e-mail';
